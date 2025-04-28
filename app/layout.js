@@ -11,9 +11,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="relative bg-[#f8f8f8]">
         <Header />
-        <div className="grid grid-cols-[auto_1fr]">
-          <SideBar />
-          {children}
+        <div className="flex justify-normal items-start w-full h-dvh">
+          <div className="h-full w-1/5 ">
+            <SideBar />
+          </div>
+          <div className="h-full w-full">{children}</div>
         </div>
       </body>
     </html>

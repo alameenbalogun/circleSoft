@@ -1,11 +1,9 @@
-
 import Link from "next/link";
-import Image from "next/image";
-
+import { MdInsertChartOutlined } from "react-icons/md";
 
 export default function SideBar({ children }) {
   return (
-    <div className="mt-[66px] fixed min-h-screen inline-block shadow-sm   bg-white">
+    <div className="mt-[66px] fixed min-h-screen inline-block shadow-sm  bg-white">
       <div className="">
         <div className="flex gap-5  px-10 p-6">
           <div className="flex gap-2 items-center">
@@ -30,14 +28,9 @@ export default function SideBar({ children }) {
                 Dashboard
               </Link>
             </li>
-            <li className="flex items-center gap-4 p-2 group px-10 group-hover:bg-[#F8F8F8] h-[50px] group-hover:text-[#5932EA]">
-              <img
-                src="/finance.svg"
-                alt="finance"
-                width={20}
-                // className="fill-[#5932EA]"
-              />
-              <Link href="/finance" className="text-[16px]">
+            <li className="flex items-center gap-4 p-2 group px-10 hover:bg-[#F8F8F8] h-[50px] hover:text-[#5932EA]">
+              <MdInsertChartOutlined className="w-6 h-6 object-cover" />
+              <Link href="/finance" className="text-[16px] ">
                 Finance
               </Link>
             </li>
