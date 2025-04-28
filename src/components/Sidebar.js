@@ -10,7 +10,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 export default function SideBar() {
   return (
-    <div className="mt-[66px] fixed min-h-screen inline-block shadow-sm  bg-white">
+    <div className="top-[66px] fixed min-h-screen inline-block shadow-sm  bg-white">
       <div className="">
         <div className="flex gap-5  px-10 p-6">
           <div className="flex gap-2 items-center">

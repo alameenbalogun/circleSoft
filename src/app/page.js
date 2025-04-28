@@ -77,7 +77,7 @@ export default function Page() {
 
   return (
     <PageLayout>
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid grid-cols-4 gap-8 ">
         <JobCard
           title={" Total Employees"}
           icon={"/tradeSignal.svg"}
@@ -86,21 +86,21 @@ export default function Page() {
           description={"Employee"}
         />
         <JobCard
-          title={"Total Job Views"}
+          title={"Job Views"}
           icon={"/tradeSignal.svg"}
           percentage={22.0}
           number={3_342}
           description={"Viewers"}
         />
         <JobCard
-          title={"Total Job Applied"}
+          title={"Job Applied"}
           icon={"/tradeSignal.svg"}
           percentage={12.0}
           number={77}
           description={"Applicants"}
         />
         <JobCard
-          title={"Total Resigned Employee"}
+          title={"Resigned Employees"}
           icon={"/tradeRed.svg"}
           percentage={7.0}
           number={856}
@@ -110,7 +110,7 @@ export default function Page() {
         />
       </div>
 
-      <div className="shadow-sm bg-white mt-4">
+      <div className="shadow-sm bg-white mt-6 h-[362px]  rounded-[6px]">
         <div className="flex justify-between items-center mb-4 p-4 px-6">
           <h2 className="text-xl font-semibold">Job Statistics</h2>
           <div className="flex items-center gap-4">
@@ -165,7 +165,7 @@ export default function Page() {
         </ResponsiveContainer>
       </div>
       <div className="shadow-md mt-6 grid grid-cols-[2fr_1fr] gap-4">
-        <div className=" bg-white shadow-md p-2 px-6">
+        <div className=" bg-white shadow-md p-2 px-6  rounded-[6px]">
           <div className="flex items-center justify-between  p-2">
             <h1 className="font-bold text-[#343434] text-[14px] mt-4">
               Employee Status
@@ -187,56 +187,56 @@ export default function Page() {
           <div className="grid grid-cols-5 p-2 text-[11px] gap-2 items-center font-bold">
             <div className="flex items-center gap-1">
               <img src="justin.svg" alt="Justin" width={30} />
-              <h1>Justin Lipshutz</h1>
+              <p>Justin Lipshutz</p>
             </div>
-            <h1>Marketing</h1>
-            <h1>22</h1>
-            <h1>
+            <p>Marketing</p>
+            <p>22</p>
+            <p>
               <span className="text-[#16C098] text-[12px] font-extrabold">
                 +
               </span>
               100%
-            </h1>
-            <h1 className="bg-[#16C09833] p-2 w-[80px] text-[#16C098]  rounded-md">
+            </p>
+            <p className="bg-[#16C09833] w-[87px] px-2 py-1  text-center font-bold text-sm  text-[#16C098]  rounded">
               Permanent
-            </h1>
+            </p>
           </div>
           <div className="grid grid-cols-5 gap-2 p-2 text-[11px] items-center font-bold">
             <div className="flex items-center gap-1">
               <img src="justin.svg" alt="Justin" width={30} />
-              <h1>Marcus Culhane</h1>
+              <p>Marcus Culhane</p>
             </div>
-            <h1>Fianance</h1>
-            <h1>24</h1>
-            <h1>
+            <p>Fianance</p>
+            <p>24</p>
+            <p>
               <span className="text-[#16C098] text-[12px] font-extrabold">
                 +
               </span>
               95%
-            </h1>
-            <h1 className="bg-[#AFAFAF33] p-2 text-[#16C098] w-[80px] rounded-md">
+            </p>
+            <p className="bg-[#AFAFAF]/20 px-2 py-1  text-center font-bold text-sm text-[#5C5C5C] w-[87px] rounded">
               Contract
-            </h1>
+            </p>
           </div>
           <div className="grid grid-cols-5 p-2 gap-2 text-[12px] items-center font-bold">
             <div className="flex items-center gap-1">
               <img src="leo.svg" alt="leo" width={30} />
-              <h1>Leo Stanturn</h1>
+              <p>Leo Stanturn</p>
             </div>
-            <h1>R&D</h1>
-            <h1>28</h1>
-            <h1>
+            <p>R&D</p>
+            <p>28</p>
+            <p>
               <span className="text-[#16C098] text-[12px] font-extrabold">
                 +
               </span>
               89%
-            </h1>
-            <h1 className="bg-[#16C09833] p-2 text-[#16C098] inline-block rounded-md w-[80px]">
+            </p>
+            <p className="bg-[#16C09833] text-[#16C098] inline-block px-2 py-1  text-center font-bold text-sm rounded w-[87px]">
               Permanent
-            </h1>
+            </p>
           </div>
         </div>
-        <div className="shadow-md bg-white p-2 px-6">
+        <div className="shadow-md bg-white p-2 px-6  rounded-[6px]">
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
           </h1>
