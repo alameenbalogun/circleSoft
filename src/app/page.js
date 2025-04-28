@@ -110,7 +110,7 @@ export default function Page() {
         />
       </div>
 
-      <div className="shadow-sm bg-white mt-6 h-[362px]  rounded-[6px]">
+      <div className="shadow-sm bg-white mt-6 h-[400px] rounded-[6px] pb-10">
         <div className="flex justify-between items-center mb-4 p-4 px-6">
           <h2 className="text-xl font-semibold">Job Statistics</h2>
           <div className="flex items-center gap-4">
@@ -139,7 +139,7 @@ export default function Page() {
             </BarChart>
             </ResponsiveContainer> */}
 
-        <ResponsiveContainer width="100%" height={200}>
+        <ResponsiveContainer width="100%" height="85%">
           <BarChart
             width={50}
             height={100}
@@ -164,9 +164,9 @@ export default function Page() {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="shadow-md mt-6 grid grid-cols-[2fr_1fr] gap-4">
-        <div className=" bg-white shadow-md p-2 px-6  rounded-[6px]">
-          <div className="flex items-center justify-between  p-2">
+      <div className="mt-6 grid grid-cols-[2fr_1fr] gap-10">
+        <div className=" bg-white shadow-md py-5 px-6  rounded-[6px]">
+          <div className="flex items-center justify-between mb-10">
             <h1 className="font-bold text-[#343434] text-[14px] mt-4">
               Employee Status
             </h1>
@@ -177,14 +177,14 @@ export default function Page() {
               <img src="/filter.svg" alt="Filter" width={15} />
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-2 p-2 mt-2 text-[#949494] text-[12px]">
+          <div className="grid grid-cols-5 gap-2 p-2 mt-2 text-[#949494] text-[12px] text-center">
             <p>Employee Name</p>
             <p>Department</p>
             <p>Age</p>
             <p>Discipline</p>
             <p>Status</p>
           </div>
-          <div className="grid grid-cols-5 p-2 text-[11px] gap-2 items-center font-bold">
+          <div className="grid grid-cols-5 p-2 text-[11px] gap-2 place-items-center items-center font-bold ">
             <div className="flex items-center gap-1">
               <img src="justin.svg" alt="Justin" width={30} />
               <p>Justin Lipshutz</p>
@@ -197,11 +197,11 @@ export default function Page() {
               </span>
               100%
             </p>
-            <p className="bg-[#16C09833] w-[87px] px-2 py-1  text-center font-bold text-sm  text-[#16C098]  rounded">
+            <p className="bg-[#16C09833] w-max px-2 py-1 !items-center text-center font-bold text-sm  text-[#16C098] rounded">
               Permanent
             </p>
           </div>
-          <div className="grid grid-cols-5 gap-2 p-2 text-[11px] items-center font-bold">
+          <div className="grid grid-cols-5 gap-2 p-2 text-[11px] place-items-center items-center font-bold text-center">
             <div className="flex items-center gap-1">
               <img src="justin.svg" alt="Justin" width={30} />
               <p>Marcus Culhane</p>
@@ -214,11 +214,11 @@ export default function Page() {
               </span>
               95%
             </p>
-            <p className="bg-[#AFAFAF]/20 px-2 py-1  text-center font-bold text-sm text-[#5C5C5C] w-[87px] rounded">
+            <p className="bg-[#AFAFAF]/20 px-2 py-1  text-center font-bold text-sm text-[#5C5C5C] w-max rounded">
               Contract
             </p>
           </div>
-          <div className="grid grid-cols-5 p-2 gap-2 text-[12px] items-center font-bold">
+          <div className="grid grid-cols-5 p-2 gap-2 text-[12px] items-center font-bold place-items-center">
             <div className="flex items-center gap-1">
               <img src="leo.svg" alt="leo" width={30} />
               <p>Leo Stanturn</p>
@@ -231,12 +231,12 @@ export default function Page() {
               </span>
               89%
             </p>
-            <p className="bg-[#16C09833] text-[#16C098] inline-block px-2 py-1  text-center font-bold text-sm rounded w-[87px]">
+            <p className="bg-[#16C09833] text-[#16C098] inline-block px-2 py-1  text-center font-bold text-sm rounded w-max">
               Permanent
             </p>
           </div>
         </div>
-        <div className="shadow-md bg-white p-2 px-6  rounded-[6px]">
+        <div className="shadow-md bg-white p-2 px-6 rounded-[6px]">
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
           </h1>
