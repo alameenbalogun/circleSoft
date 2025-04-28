@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="fixed w-screen grid grid-cols-[auto_1fr_auto] items-center gap-28 p-3 px-10 bg-white shadow-sm">
+    <div className="sticky top-0 w-screen grid grid-cols-[auto_1fr_auto] items-center gap-28 p-3 px-10 bg-white shadow-sm">
       <div className="flex gap-1 items-center">
         <div className="flex justify-center items-center">
           <img src="./logo-1.svg" alt="Side Logo" className="" />
