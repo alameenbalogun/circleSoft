@@ -1,6 +1,5 @@
-
-import Header from "../_compponents/Header";
-import SideBar from "../_compponents/Sidebar";
+import Header from "../components/Header";
+import SideBar from "../components/Sidebar";
 import "./globals.css";
 
 export const metadata = {

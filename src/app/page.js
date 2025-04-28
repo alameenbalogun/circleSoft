@@ -15,8 +15,8 @@ import {
   YAxis,
 } from "recharts";
 import { FaMale, FaFemale } from "react-icons/fa";
-import PageLayout from "../_compponents/PageLayout";
-import JobCard from "../_compponents/JobCard";
+import PageLayout from "../components/PageLayout";
+import JobCard from "../components/JobCard";
 
 export default function Page() {
   const data = [

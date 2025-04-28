@@ -1,9 +1,7 @@
 import Header from "../_compponents/Header";
-import PageLayout from "@/src/_compponents/PageLayout";
+import PageLayout from "@/src/components/PageLayout";
 import SideBar from "../_compponents/Sidebar";
 
 export default function Page() {
-  return (
-    <PageLayout>Employee here...</PageLayout>
-  );
+  return <PageLayout>Employee here...</PageLayout>;
 }
