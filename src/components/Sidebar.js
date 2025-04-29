@@ -23,7 +23,7 @@ export default function SideBar() {
         <img src="/menu.svg" alt="Menu " />
       </div>
       <div className="mt-3 flex flex-col h-full">
-        <div>
+        <div>  
           {" "}
           <ul className="mb-4 cursor-pointer">
             <Link
