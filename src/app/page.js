@@ -166,6 +166,7 @@ export default function Page() {
           </BarChart>
         </ResponsiveContainer>
       </div>
+
       <div className="mt-6 grid grid-cols-[2fr_1fr] gap-10">
         <div className=" bg-white shadow-md py-5 px-6 pb-10 rounded-[6px]">
           <div className="flex items-center justify-between mb-10">
@@ -179,6 +180,7 @@ export default function Page() {
               <img src="/filter.svg" alt="Filter" width={15} />
             </div>
           </div>
+          
           <div className="relative overflow-x-auto overflow-y-auto h-100 shadow-md sm:rounded-lg pb-5">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -218,6 +220,7 @@ export default function Page() {
                       />
                       {employee.name}
                     </th>
+                    
                     <td className="px-6 py-4">{employee.department}</td>
                     <td className="px-6 py-4">{employee.age}</td>
                     <td className="px-6 py-4">{employee.growth}</td>
@@ -249,6 +252,7 @@ export default function Page() {
             </table>
           </div>
         </div>
+
         <div className="shadow-md bg-white p-2 px-6 rounded-[6px]">
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
