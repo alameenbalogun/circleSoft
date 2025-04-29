@@ -11,19 +11,18 @@ import { CiLogout } from "react-icons/ci";
 
 export default function SideBar() {
   return (
-    <div className="top-[66px] fixed min-h-screen inline-block shadow-sm  bg-white">
-      <div className="">
-        <div className="flex gap-5  px-10 p-6">
-          <div className="flex gap-2 items-center">
-            <img src="/gavano.svg" alt="Gavano Image" width={40} />
-            <div className="">
-              <h1 className="font-bold">Gavano</h1>
-              <p className="text-[11px]">HR Manager</p>
-            </div>
+    <div className="top-[66px] fixed min-h-[calc(100vh-66px)] inline-block shadow-sm  bg-white">
+      <div className="flex gap-5  px-10 p-6">
+        <div className="flex gap-2 items-center">
+          <img src="/gavano.svg" alt="Gavano Image" width={40} />
+          <div className="">
+            <h1 className="font-bold">Gavano</h1>
+            <p className="text-[11px]">HR Manager</p>
           </div>
-          <img src="/menu.svg" alt="Menu " />
         </div>
-        <div className="mt-3 flex flex-col">
+        <img src="/menu.svg" alt="Menu " />
+      </div>
+      <div className="mt-3 flex flex-col">
           <div>
             {" "}
             <ul className="mb-4 cursor-pointer">
@@ -73,7 +72,6 @@ export default function SideBar() {
           </div>
 
           <hr className="bg-[#E0E0E0] h-[1px] border-0" />
-
           <div>
             <ul className="mt-3 cursor-pointer">
               <Link
@@ -93,19 +91,16 @@ export default function SideBar() {
             </ul>
           </div>
 
-          <div className="items-end">
-            <hr className="bg-[#E0E0E0] h-[1px] border-0" />
-
-            <ul className="cursor-pointer">
-              <Link
-                href="/logout"
-                className="flex items-center gap-4 p-2  px-10  hover:bg-[#F8F8F8] h-[50px] hover:text-[#5932EA]"
-              >
-                <CiLogout className="w-6 h-6 object-cover" />
-                <p className="text-[16px]">Logout</p>
-              </Link>
-            </ul>
-          </div>
+        <div className="absolute bottom-0 w-full">
+          <ul className="cursor-pointer">
+            <Link
+              href="/logout"
+              className="flex items-center gap-4 p-2  px-10 text-red-500 bg-white  hover:bg-red-500 hover:text-white h-[50px] "
+            >
+              <CiLogout className="w-6 h-6 object-cover" />
+              <p className="text-[16px] font-semibold">Logout</p>
+            </Link>
+          </ul>
         </div>
       </div>
     </div>
