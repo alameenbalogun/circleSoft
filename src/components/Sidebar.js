@@ -12,12 +12,12 @@ import { CiLogout } from "react-icons/ci";
 export default function SideBar() {
   return (
     <div className="top-[66px] shadow-sm !h-[calc(100vh-66px)] bg-white flex flex-col overflow-y-auto">
-      <div className="flex gap-5  !px-5 p-6">
+      <div className="flex gap-2 xl:gap-5 px-2 xl:!px-5 p-6">
         <div className="flex gap-2 items-center">
           <img src="/gavano.svg" alt="Gavano Image" width={40} />
           <div className="">
-            <h1 className="font-bold">Gavano</h1>
-            <p className="text-[11px]">HR Manager</p>
+            <h1 className="font-bold text-sm xl:text-base">Gavano</h1>
+            <p className="text-[10px] xl:text-[11px]">HR Manager</p>
           </div>
         </div>
         <img src="/menu.svg" alt="Menu " />
