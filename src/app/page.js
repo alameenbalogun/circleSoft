@@ -17,6 +17,8 @@ import {
 import { FaMale, FaFemale } from "react-icons/fa";
 import PageLayout from "../components/PageLayout";
 import JobCard from "../components/JobCard";
+import employees from "../json/employee.json";
+import Image from "next/image";
 
 export default function Page() {
   const data = [
@@ -165,7 +167,7 @@ export default function Page() {
         </ResponsiveContainer>
       </div>
       <div className="mt-6 grid grid-cols-[2fr_1fr] gap-10">
-        <div className=" bg-white shadow-md py-5 px-6  rounded-[6px]">
+        <div className=" bg-white shadow-md py-5 px-6 pb-10 rounded-[6px]">
           <div className="flex items-center justify-between mb-10">
             <h1 className="font-bold text-[#343434] text-[14px] mt-4">
               Employee Status
@@ -177,63 +179,74 @@ export default function Page() {
               <img src="/filter.svg" alt="Filter" width={15} />
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-2 p-2 mt-2 text-[#949494] text-[12px] text-center">
-            <p>Employee Name</p>
-            <p>Department</p>
-            <p>Age</p>
-            <p>Discipline</p>
-            <p>Status</p>
-          </div>
-          <div className="grid grid-cols-5 p-2 text-[11px] gap-2 place-items-center items-center font-bold ">
-            <div className="flex items-center gap-1">
-              <img src="justin.svg" alt="Justin" width={30} />
-              <p>Justin Lipshutz</p>
-            </div>
-            <p>Marketing</p>
-            <p>22</p>
-            <p>
-              <span className="text-[#16C098] text-[12px] font-extrabold">
-                +
-              </span>
-              100%
-            </p>
-            <p className="bg-[#16C09833] w-max px-2 py-1 !items-center text-center font-bold text-sm  text-[#16C098] rounded">
-              Permanent
-            </p>
-          </div>
-          <div className="grid grid-cols-5 gap-2 p-2 text-[11px] place-items-center items-center font-bold text-center">
-            <div className="flex items-center gap-1">
-              <img src="justin.svg" alt="Justin" width={30} />
-              <p>Marcus Culhane</p>
-            </div>
-            <p>Fianance</p>
-            <p>24</p>
-            <p>
-              <span className="text-[#16C098] text-[12px] font-extrabold">
-                +
-              </span>
-              95%
-            </p>
-            <p className="bg-[#AFAFAF]/20 px-2 py-1  text-center font-bold text-sm text-[#5C5C5C] w-max rounded">
-              Contract
-            </p>
-          </div>
-          <div className="grid grid-cols-5 p-2 gap-2 text-[12px] items-center font-bold place-items-center">
-            <div className="flex items-center gap-1">
-              <img src="leo.svg" alt="leo" width={30} />
-              <p>Leo Stanturn</p>
-            </div>
-            <p>R&D</p>
-            <p>28</p>
-            <p>
-              <span className="text-[#16C098] text-[12px] font-extrabold">
-                +
-              </span>
-              89%
-            </p>
-            <p className="bg-[#16C09833] text-[#16C098] inline-block px-2 py-1  text-center font-bold text-sm rounded w-max">
-              Permanent
-            </p>
+          <div className="relative overflow-x-auto overflow-y-auto h-100 shadow-md sm:rounded-lg pb-5">
+            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th scope="col" className="px-6 py-3">
+                    Employee Name
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Department
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Age
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Discipline
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Status
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {employees.map((employee, idx) => (
+                  <tr
+                    key={idx}
+                    className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200"
+                  >
+                    <th
+                      scope="row"
+                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex justify-normal gap-1 items-center"
+                    >
+                      <Image
+                        src="leo.svg"
+                        width={30}
+                        height={30}
+                        alt={employee.name}
+                      />
+                      {employee.name}
+                    </th>
+                    <td className="px-6 py-4">{employee.department}</td>
+                    <td className="px-6 py-4">{employee.age}</td>
+                    <td className="px-6 py-4">{employee.growth}</td>
+                    <td className={`px-6 py-4  `}>
+                      <p
+                        className={`p-2 text-white !w-24 text-center font-semibold text-xs rounded ${
+                          employee.employmentType === "Permanent"
+                            ? "bg-green-600"
+                            : employee.employmentType === "Contract"
+                            ? "bg-yellow-600"
+                            : "bg-blue-700"
+                        } `}
+                      >
+                        {" "}
+                        {employee.employmentType}
+                      </p>
+                    </td>
+                    {/* <td className="px-6 py-4">
+                      <a
+                        href="#"
+                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      >
+                        Edit
+                      </a>
+                    </td> */}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
         <div className="shadow-md bg-white p-2 px-6 rounded-[6px]">

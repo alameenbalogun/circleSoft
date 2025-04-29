@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Justin Lipshutz",
+    "department": "Marketing",
+    "age": 22,
+    "growth": "+100%",
+    "employmentType": "Permanent",
+    "avatar": "justin.svg"
+  },
+  {
+    "name": "Sophia Turner",
+    "department": "Finance",
+    "age": 29,
+    "growth": "+85%",
+    "employmentType": "Contract",
+    "avatar": "sophia.svg"
+  },
+  {
+    "name": "Ethan Chen",
+    "department": "Engineering",
+    "age": 26,
+    "growth": "+92%",
+    "employmentType": "Permanent",
+    "avatar": "ethan.svg"
+  },
+  {
+    "name": "Maya Patel",
+    "department": "Design",
+    "age": 24,
+    "growth": "+76%",
+    "employmentType": "Intern",
+    "avatar": "maya.svg"
+  },
+  {
+    "name": "Liam Johnson",
+    "department": "Sales",
+    "age": 31,
+    "growth": "+68%",
+    "employmentType": "Permanent",
+    "avatar": "liam.svg"
+  },
+  {
+    "name": "Ava Kim",
+    "department": "Product",
+    "age": 27,
+    "growth": "+81%",
+    "employmentType": "Contract",
+    "avatar": "ava.svg"
+  },
+  {
+    "name": "Noah Brown",
+    "department": "Marketing",
+    "age": 28,
+    "growth": "+70%",
+    "employmentType": "Permanent",
+    "avatar": "noah.svg"
+  },
+  {
+    "name": "Olivia Davis",
+    "department": "HR",
+    "age": 25,
+    "growth": "+88%",
+    "employmentType": "Permanent",
+    "avatar": "olivia.svg"
+  },
+  {
+    "name": "William Garcia",
+    "department": "Finance",
+    "age": 30,
+    "growth": "+90%",
+    "employmentType": "Contract",
+    "avatar": "william.svg"
+  },
+  {
+    "name": "Emma Wilson",
+    "department": "Engineering",
+    "age": 23,
+    "growth": "+75%",
+    "employmentType": "Permanent",
+    "avatar": "emma.svg"
+  },
+  {
+    "name": "James Lee",
+    "department": "Sales",
+    "age": 32,
+    "growth": "+66%",
+    "employmentType": "Contract",
+    "avatar": "james.svg"
+  },
+  {
+    "name": "Charlotte Hall",
+    "department": "Design",
+    "age": 21,
+    "growth": "+82%",
+    "employmentType": "Intern",
+    "avatar": "charlotte.svg"
+  },
+  {
+    "name": "Benjamin Wright",
+    "department": "Engineering",
+    "age": 28,
+    "growth": "+77%",
+    "employmentType": "Permanent",
+    "avatar": "benjamin.svg"
+  },
+  {
+    "name": "Amelia Lopez",
+    "department": "Marketing",
+    "age": 27,
+    "growth": "+93%",
+    "employmentType": "Permanent",
+    "avatar": "amelia.svg"
+  },
+  {
+    "name": "Lucas Scott",
+    "department": "Product",
+    "age": 26,
+    "growth": "+79%",
+    "employmentType": "Contract",
+    "avatar": "lucas.svg"
+  },
+  {
+    "name": "Mila Young",
+    "department": "HR",
+    "age": 24,
+    "growth": "+88%",
+    "employmentType": "Intern",
+    "avatar": "mila.svg"
+  },
+  {
+    "name": "Henry Allen",
+    "department": "Sales",
+    "age": 33,
+    "growth": "+91%",
+    "employmentType": "Permanent",
+    "avatar": "henry.svg"
+  },
+  {
+    "name": "Ella Martinez",
+    "department": "Design",
+    "age": 22,
+    "growth": "+74%",
+    "employmentType": "Contract",
+    "avatar": "ella.svg"
+  },
+  {
+    "name": "Jack Walker",
+    "department": "Finance",
+    "age": 29,
+    "growth": "+84%",
+    "employmentType": "Permanent",
+    "avatar": "jack.svg"
+  },
+  {
+    "name": "Grace Rivera",
+    "department": "Product",
+    "age": 27,
+    "growth": "+95%",
+    "employmentType": "Permanent",
+    "avatar": "grace.svg"
+  }
+]
