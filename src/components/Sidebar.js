@@ -12,7 +12,8 @@ import { CiLogout } from "react-icons/ci";
 export default function SideBar() {
   return (
     <div className="top-[66px] fixed min-h-screen inline-block shadow-sm  bg-white">
-      <div className="">
+      <div className="overflow-y-scroll h-screen">
+        {/* user details */}
         <div className="flex gap-5  px-10 p-6">
           <div className="flex gap-2 items-center">
             <img src="/gavano.svg" alt="Gavano Image" width={40} />
@@ -23,9 +24,10 @@ export default function SideBar() {
           </div>
           <img src="/menu.svg" alt="Menu " />
         </div>
-        <div className="mt-3 flex flex-col">
-          <div>
-            {" "}
+
+        {/* routes */}
+        <div className="mt-3 flex flex-col items-between">
+          <div className="flex-grow">
             <ul className="mb-4 cursor-pointer">
               <Link
                 href="/"
@@ -70,33 +72,33 @@ export default function SideBar() {
                 <p className="text-[16px]">Calendar</p>
               </Link>
             </ul>
-          </div>
 
-          <hr className="bg-[#E0E0E0] h-[1px] border-0" />
-
-          <div>
-            <ul className="mt-3 cursor-pointer">
-              <Link
-                href="/profile"
-                className="flex items-center gap-4 p-2  px-10  hover:bg-[#F8F8F8] h-[50px] hover:text-[#5932EA]"
-              >
-                <BsPerson className="w-6 h-6 object-cover" />
-                <p className="text-[16px]">Profile</p>
-              </Link>
-              <Link
-                href="/settings"
-                className="flex items-center gap-4 p-2  px-10  hover:bg-[#F8F8F8] h-[50px] hover:text-[#5932EA]"
-              >
-                <IoSettingsOutline className="w-6 h-6 object-cover" />
-                <p className="text-[16px]">Settings</p>
-              </Link>
-            </ul>
-          </div>
-
-          <div className="items-end">
             <hr className="bg-[#E0E0E0] h-[1px] border-0" />
 
-            <ul className="cursor-pointer">
+            <div>
+              <ul className="mt-3 cursor-pointer">
+                <Link
+                  href="/profile"
+                  className="flex items-center gap-4 p-2  px-10  hover:bg-[#F8F8F8] h-[50px] hover:text-[#5932EA]"
+                >
+                  <BsPerson className="w-6 h-6 object-cover" />
+                  <p className="text-[16px]">Profile</p>
+                </Link>
+                <Link
+                  href="/settings"
+                  className="flex items-center gap-4 p-2  px-10  hover:bg-[#F8F8F8] h-[50px] hover:text-[#5932EA]"
+                >
+                  <IoSettingsOutline className="w-6 h-6 object-cover" />
+                  <p className="text-[16px]">Settings</p>
+                </Link>
+              </ul>
+            </div>
+          </div>
+
+          <div className="items-end flex-grow">
+            <hr className="bg-[#E0E0E0] h-[1px] border-0" />
+
+            <ul className="cursor-pointer mt-auto">
               <Link
                 href="/logout"
                 className="flex items-center gap-4 p-2  px-10  hover:bg-[#F8F8F8] h-[50px] hover:text-[#5932EA]"
