@@ -41,6 +41,9 @@ export default function Page() {
     { name: "Male", value: 35 },
   ];
 
+  const labels = ["Apple", "Banana", "Orange"];
+  const series = [44, 55, 13];
+
   const COLORS = ["#16C098", "#5932EA"];
 
   const RADIAN = Math.PI / 180;
@@ -79,7 +82,7 @@ export default function Page() {
 
   return (
     <PageLayout>
-      <div className="grid grid-cols-4 gap-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
         <JobCard
           title={" Total Employees"}
           icon={"/tradeSignal.svg"}
@@ -257,27 +260,29 @@ export default function Page() {
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
           </h1>
-          <ResponsiveContainer width="100%" height={200}>
-            <PieChart>
-              <Pie
-                data={data2}
-                innerRadius={50}
-                outerRadius={70}
-                dataKey="value"
-                startAngle={90}
-                endAngle={-270}
-                paddingAngle={3}
-                label={renderCustomizedLabel}
-              >
-                {data2.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-            </PieChart>
-          </ResponsiveContainer>
+          <div className="w-full h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={data2}
+                  innerRadius={50}
+                  outerRadius={70}
+                  dataKey="value"
+                  startAngle={90}
+                  endAngle={-270}
+                  paddingAngle={3}
+                  label={renderCustomizedLabel}
+                >
+                  {data2.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
 
           <h1 className="text-[#949494] text-center  ">856 Total Employee</h1>
         </div>
