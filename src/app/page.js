@@ -171,8 +171,15 @@ export default function Page() {
         </div>
 
         <div className="shadow-md bg-white p-2 px-6 rounded-[6px] w-full">
+<<<<<<< HEAD
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">Employee Composition</h1>
           <div className="w-full h-[400px] object-cover sm:scale-125 md:scale-150 xl:scale-200">
+=======
+          <h1 className="font-bold text-[#343434] text-[14px] mt-5">
+            Employee Composition
+          </h1>
+          <div className="w-full h-[400px] object-cover scale-100 md:scale-125  lg:scale-130  xl:scale-150 2xl:scale-200">
+>>>>>>> f05161e61d757077f0b1f93f1d522b2ee0899718
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie

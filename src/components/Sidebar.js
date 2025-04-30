@@ -22,9 +22,9 @@ export default function SideBar() {
     }`;
 
   return (
-    <div className="top-[66px] fixed shadow-sm h-[calc(100vh-66px)] bg-white flex flex-col overflow-y-auto">
+    <div className="top-[66px] shadow-sm !h-[calc(100vh-66px)] bg-white flex flex-col overflow-y-auto">
       <div className="flex gap-2 md:gap-5 xl:gap-10 px-2 md:px-5 xl:px-10 p-6">
-        <div className="flex gap-2 xl:gap-3 items-center">
+        <div className="flex gap-2 xl:!gap-3 items-center">
           <img src="/gavano.svg" alt="Gavano Image" width={40} />
           <div>
             <h1 className="font-bold text-sm xl:text-base">Gavano</h1>
