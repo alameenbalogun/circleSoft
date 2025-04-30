@@ -19,6 +19,7 @@ import PageLayout from "../components/PageLayout";
 import JobCard from "../components/JobCard";
 import employees from "../json/employee.json";
 import Image from "next/image";
+import { BarChartShad } from "../components/Charts";
 
 export default function Page() {
   const data = [
@@ -82,7 +83,7 @@ export default function Page() {
 
   return (
     <PageLayout>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-8 xl:!gap-10 mb-16">
         <JobCard
           title={" Total Employees"}
           icon={"/tradeSignal.svg"}
@@ -115,7 +116,7 @@ export default function Page() {
         />
       </div>
 
-      <div className="shadow-sm bg-white mt-6 h-[400px] rounded-[6px] pb-10">
+      <div className="shadow-sm bg-white mt-6 h-[50vh] rounded pb-10 !p-5 mb-16">
         <div className="flex justify-between items-center mb-4 p-4 px-6">
           <h2 className="text-xl font-semibold">Job Statistics</h2>
           <div className="flex items-center gap-4">
@@ -132,8 +133,8 @@ export default function Page() {
             </button>
           </div>
         </div>
-
-        {/* <ResponsiveContainer width="100%" height={200}>
+        {/* 
+        <ResponsiveContainer width="100%" height={200}>
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} />
             <XAxis dataKey="month" />
@@ -141,8 +142,8 @@ export default function Page() {
             <Tooltip />
             <Bar dataKey="view" stackId="a" fill="#5932EA" />
             <Bar dataKey="applied" stackId="a" fill="#F2EFFF" />
-            </BarChart>
-            </ResponsiveContainer> */}
+          </BarChart>
+        </ResponsiveContainer> */}
 
         <ResponsiveContainer width="100%" height="85%">
           <BarChart
@@ -163,20 +164,23 @@ export default function Page() {
             <XAxis dataKey="month" />
             <YAxis />
             <Tooltip />
-            {/* <Legend /> */}
+            <Legend />
             <Bar dataKey="view" stackId="a" fill="#5932EA" />
             <Bar dataKey="applied" stackId="a" fill="#F2EFFF" />
           </BarChart>
         </ResponsiveContainer>
+        {/* <div className="h-[300px] md:h-[400px] lg:h-[500px]">
+          <BarChartShad />
+        </div> */}
       </div>
 
-      <div className="mt-6 grid grid-cols-[2fr_1fr] gap-10">
+      <div className="mt-6 grid sm:grid-cols-1 md:grid-cols-[2fr_1fr] gap-10 w-full">
         <div className=" bg-white shadow-md py-5 px-6 pb-10 rounded-[6px]">
           <div className="flex items-center justify-between mb-10">
             <h1 className="font-bold text-[#343434] text-[14px] mt-4">
               Employee Status
             </h1>
-            <div className="flex items-center rounded-md gap-1 bg-[#F6F6F6] shadow-md p-2">
+            <div className="flex items-center rounded-md gap-1 bg-white shadow-md p-2">
               <p className="text-[12px] font-bold text-[#1A2B88]">
                 Filter & Short
               </p>
@@ -241,26 +245,17 @@ export default function Page() {
                         {employee.employmentType}
                       </p>
                     </td>
-                    {/* <td className="px-6 py-4">
-                      <a
-                        href="#"
-                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >
-                        Edit
-                      </a>
-                    </td> */}
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
         </div>
-
-        <div className="shadow-md bg-white p-2 px-6 rounded-[6px]">
+        <div className="shadow-md bg-white p-2 px-6 rounded-[6px] w-full">
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
           </h1>
-          <div className="w-full h-[300px]">
+          <div className="w-full h-[400px] object-cover sm:scale-125 md:scale-150 xl:scale-200">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
