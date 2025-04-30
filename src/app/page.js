@@ -252,7 +252,7 @@ export default function Page() {
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
           </h1>
-          <div className="w-full h-[400px] object-cover sm:scale-125 md:scale-150 xl:scale-200">
+          <div className="w-full h-[400px] object-cover scale-100 md:scale-125  lg:scale-130  xl:scale-150 2xl:scale-200">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
