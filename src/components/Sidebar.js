@@ -34,19 +34,17 @@ export default function SideBar() {
         <img src="/menu.svg" alt="Menu" />
       </div>
 
-      <div className="mt-3 flex flex-col h-full">
+      <div className="flex flex-col flex-grow justify-between">
         <div>
           <ul className="mb-4 cursor-pointer">
             <Link href="/" className={linkClass("/")}>
               <LuLayoutDashboard className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Dashboard</p>
             </Link>
-
             <Link href="/finance" className={linkClass("/finance")}>
               <MdInsertChartOutlined className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Finance</p>
             </Link>
-
             <Link href="/calendar" className={linkClass("/calendar")}>
               <LuCalendarDays className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Calendar</p>
@@ -61,29 +59,24 @@ export default function SideBar() {
                 <LiaIdCard className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Employees</p>
               </Link>
-
               <Link href="/company" className={linkClass("/company")}>
                 <TbBriefcase className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Company</p>
               </Link>
-
               <Link href="/candidate" className={linkClass("/candidate")}>
                 <IoIosContact className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Candidate</p>
               </Link>
             </div>
           </ul>
-        </div>
 
-        <hr className="bg-[#E0E0E0] h-[1px] border-0" />
+          <hr className="bg-[#E0E0E0] h-[1px] border-0" />
 
-        <div>
           <ul className="mt-3 cursor-pointer">
             <Link href="/profile" className={linkClass("/profile")}>
               <BsPerson className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Profile</p>
             </Link>
-
             <Link href="/settings" className={linkClass("/settings")}>
               <IoSettingsOutline className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Settings</p>
@@ -91,7 +84,7 @@ export default function SideBar() {
           </ul>
         </div>
 
-        <div className="items-end">
+        <div>
           <hr className="bg-[#E0E0E0] h-[1px] border-0" />
           <ul className="cursor-pointer">
             <Link
@@ -107,4 +100,3 @@ export default function SideBar() {
     </div>
   );
 }
-
