@@ -5,7 +5,12 @@
     "age": 22,
     "growth": "+100%",
     "employmentType": "Permanent",
-    "avatar": "justin.svg"
+    "avatar": "justin.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated"
   },
   {
     "name": "Sophia Turner",
@@ -13,7 +18,12 @@
     "age": 29,
     "growth": "+85%",
     "employmentType": "Contract",
-    "avatar": "sophia.svg"
+    "avatar": "sophia.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onleave",
+    "account": "activated"
   },
   {
     "name": "Ethan Chen",
@@ -21,7 +31,12 @@
     "age": 26,
     "growth": "+92%",
     "employmentType": "Permanent",
-    "avatar": "ethan.svg"
+    "avatar": "ethan.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onboarding",
+    "account": "activated"
   },
   {
     "name": "Maya Patel",
@@ -29,7 +44,12 @@
     "age": 24,
     "growth": "+76%",
     "employmentType": "Intern",
-    "avatar": "maya.svg"
+    "avatar": "maya.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onboarding",
+    "account": "activated"
   },
   {
     "name": "Liam Johnson",
@@ -37,7 +57,12 @@
     "age": 31,
     "growth": "+68%",
     "employmentType": "Permanent",
-    "avatar": "liam.svg"
+    "avatar": "liam.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onboarding",
+    "account": "activated"
   },
   {
     "name": "Ava Kim",
@@ -45,7 +70,12 @@
     "age": 27,
     "growth": "+81%",
     "employmentType": "Contract",
-    "avatar": "ava.svg"
+    "avatar": "ava.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "probation",
+    "account": "activated"
   },
   {
     "name": "Noah Brown",
@@ -53,7 +83,12 @@
     "age": 28,
     "growth": "+70%",
     "employmentType": "Permanent",
-    "avatar": "noah.svg"
+    "avatar": "noah.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "probation",
+    "account": "activated"
   },
   {
     "name": "Olivia Davis",
@@ -61,7 +96,12 @@
     "age": 25,
     "growth": "+88%",
     "employmentType": "Permanent",
-    "avatar": "olivia.svg"
+    "avatar": "olivia.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated"
   },
   {
     "name": "William Garcia",
@@ -69,7 +109,12 @@
     "age": 30,
     "growth": "+90%",
     "employmentType": "Contract",
-    "avatar": "william.svg"
+    "avatar": "william.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated"
   },
   {
     "name": "Emma Wilson",
@@ -77,7 +122,12 @@
     "age": 23,
     "growth": "+75%",
     "employmentType": "Permanent",
-    "avatar": "emma.svg"
+    "avatar": "emma.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated"
   },
   {
     "name": "James Lee",
@@ -85,7 +135,12 @@
     "age": 32,
     "growth": "+66%",
     "employmentType": "Contract",
-    "avatar": "james.svg"
+    "avatar": "james.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onb",
+    "account": "activated"
   },
   {
     "name": "Charlotte Hall",
@@ -93,7 +148,12 @@
     "age": 21,
     "growth": "+82%",
     "employmentType": "Intern",
-    "avatar": "charlotte.svg"
+    "avatar": "charlotte.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onb",
+    "account": "activated"
   },
   {
     "name": "Benjamin Wright",
@@ -101,7 +161,12 @@
     "age": 28,
     "growth": "+77%",
     "employmentType": "Permanent",
-    "avatar": "benjamin.svg"
+    "avatar": "benjamin.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onb",
+    "account": "activated"
   },
   {
     "name": "Amelia Lopez",
@@ -109,7 +174,12 @@
     "age": 27,
     "growth": "+93%",
     "employmentType": "Permanent",
-    "avatar": "amelia.svg"
+    "avatar": "amelia.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "onb",
+    "account": "activated"
   },
   {
     "name": "Lucas Scott",
@@ -117,7 +187,12 @@
     "age": 26,
     "growth": "+79%",
     "employmentType": "Contract",
-    "avatar": "lucas.svg"
+    "avatar": "lucas.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated"
   },
   {
     "name": "Mila Young",
@@ -125,7 +200,12 @@
     "age": 24,
     "growth": "+88%",
     "employmentType": "Intern",
-    "avatar": "mila.svg"
+    "avatar": "mila.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "need invitation"
   },
   {
     "name": "Henry Allen",
@@ -133,7 +213,12 @@
     "age": 33,
     "growth": "+91%",
     "employmentType": "Permanent",
-    "avatar": "henry.svg"
+    "avatar": "henry.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "need invitation"
   },
   {
     "name": "Ella Martinez",
@@ -141,7 +226,12 @@
     "age": 22,
     "growth": "+74%",
     "employmentType": "Contract",
-    "avatar": "ella.svg"
+    "avatar": "ella.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "need invitation"
   },
   {
     "name": "Jack Walker",
@@ -149,7 +239,12 @@
     "age": 29,
     "growth": "+84%",
     "employmentType": "Permanent",
-    "avatar": "jack.svg"
+    "avatar": "jack.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated"
   },
   {
     "name": "Grace Rivera",
@@ -157,6 +252,11 @@
     "age": 27,
     "growth": "+95%",
     "employmentType": "Permanent",
-    "avatar": "grace.svg"
+    "avatar": "grace.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated"
   }
 ]
