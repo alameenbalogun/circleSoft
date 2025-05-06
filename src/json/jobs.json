@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Software Engineer",
+    "location": "Remote",
+    "salary_range": "$80,000 - $100,000",
+    "color": "#FF0000",
+    "applied": 150,
+    "icon": "/assets/icons/dev.png",
+    "years_of_experience": 3,
+    "applied_last_week": 25,
+    "posted_day": "Posted 2 days ago"
+  },
+  {
+    "title": "Product Manager",
+    "location": "On-site",
+    "salary_range": "$90,000 - $120,000",
+    "color": "#FFFF00",
+    "applied": 200,
+    "icon": "/assets/icons/finance.png",
+    "years_of_experience": 5,
+    "applied_last_week": 40,
+    "posted_day": "Posted yesterday"
+  },
+  {
+    "title": "UX Designer",
+    "location": "Remote",
+    "salary_range": "$70,000 - $90,000",
+    "color": "#808080",
+    "applied": 100,
+    "icon": "/assets/icons/designer.png",
+    "years_of_experience": 2,
+    "applied_last_week": 15,
+    "posted_day": "Posted 3 days ago"
+  },
+  {
+    "title": "Data Scientist",
+    "location": "Remote",
+    "salary_range": "$85,000 - $110,000",
+    "color": "#008000",
+    "applied": 120,
+    "icon": "/assets/icons/data.png",
+    "years_of_experience": 4,
+    "applied_last_week": 30,
+    "posted_day": "Posted 5 days ago"
+  },
+  {
+    "title": "DevOps Engineer",
+    "location": "On-site",
+    "salary_range": "$95,000 - $115,000",
+    "color": "#0000FF",
+    "applied": 130,
+    "icon": "/assets/icons/growth.png",
+    "years_of_experience": 5,
+    "applied_last_week": 35,
+    "posted_day": "Posted 6 days ago"
+  },
+  {
+    "title": "Marketing Specialist",
+    "location": "Remote",
+    "salary_range": "$60,000 - $80,000",
+    "color": "#FFA500",
+    "applied": 90,
+    "icon": "/assets/icons/finance.png",
+    "years_of_experience": 2,
+    "applied_last_week": 20,
+    "posted_day": "Posted 7 days ago"
+  }
+]
