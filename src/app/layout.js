@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import SideBar from "../components/Sidebar";
+
 import "./globals.css";
 
 export const metadata = {
