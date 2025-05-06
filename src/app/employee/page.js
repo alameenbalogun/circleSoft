@@ -16,7 +16,7 @@ export default function Page() {
         {/*Header */}
         <div className="flex justify-between items-center mb-5 mt-4 ">
           <div>
-            <h1 className="text-xl text-gray-800">Employees</h1>
+            <h1 className="text-xl text-black font-extrabold leading-normal -tracking-tight uppercase">Employees</h1>
             <p className="text-gray-500">Manage your employees</p>
           </div>
 
@@ -53,11 +53,11 @@ export default function Page() {
           <DropdownSelect id={"status"} options={["All Status"]} />
         </div>
 
-        <div className="relative  sm:rounded-lg pb-5 mt-3">
+        <div className="relative pb-5 mt-3 overflow-x-auto overflow-y-auto  shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left rtl:text-right">
             <thead className="text-x uppercase bg-gray-50 ">
               <tr>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 font-semibold">
                   <div className="flex items-center gap-3 justify-between">
                     <div className="flex gap-3">
                       {" "}
@@ -67,34 +67,34 @@ export default function Page() {
                     <HiArrowsUpDown className="" />
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 font-semibold">
                   <div className="flex items-center justify-between">
                     Job Title
                     <HiArrowsUpDown />
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 font-semibold">
                   <div className="flex items-center justify-between">
                     Line Manager
                     <HiArrowsUpDown />
                   </div>{" "}
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 font-semibold">
                   <div className="flex items-center justify-between">
                     Department
                     <HiArrowsUpDown />
                   </div>{" "}
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 font-semibold">
                   <div className="flex items-center justify-between">
                     Office
                     <HiArrowsUpDown />
                   </div>{" "}
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 font-semibold">
                   Employee Status
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3 font-semibold">
                   <div className="flex items-center justify-between">
                     Account
                     <HiArrowsUpDown />
@@ -108,9 +108,9 @@ export default function Page() {
                   key={idx}
                   className="odd:bg-white  even:bg-gray-5 border-gray-200"
                 >
-                  <th
+                  <td
                     scope="row"
-                    className="px-6 py-4 font-medium  whitespace-nowrap dark:text-black flex justify-normal gap-1 items-center"
+                    className="px-6 py-4  whitespace-nowrap dark:text-black flex justify-normal gap-1 items-center"
                   >
                     <CheckBox />
                     <Image
@@ -120,7 +120,7 @@ export default function Page() {
                       alt={employee.name}
                     />
                     {employee.name}
-                  </th>
+                  </td>
                   <td className="px-6 py-4">{employee.jobTitle}</td>
                   <td className="px-6 py-4">{employee.lineManager}</td>
                   <td className="px-6 py-4">{employee.department}</td>
