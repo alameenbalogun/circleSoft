@@ -59,7 +59,7 @@ export default function SideBar() {
               className="flex items-center gap-4 p-2 px-5 xl:!px-10 hover:text-[#FFF] h-[50px] hover:bg-[#5932EA]"
             >
               <IoIosContact className="w-6 h-6 object-cover" />
-              <p className="text-[16px]">Candidate</p>
+              <p className="text-[16px]">Candidates</p>
             </Link>
             <Link
               href="/calendar"

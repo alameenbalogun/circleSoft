@@ -133,17 +133,7 @@ export default function Page() {
             </button>
           </div>
         </div>
-        {/* 
-        <ResponsiveContainer width="100%" height={200}>
-          <BarChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} />
-            <XAxis dataKey="month" />
-            <YAxis ticks={[20, 40, 60, 80, 100, 120, 140, 160, 180]} />
-            <Tooltip />
-            <Bar dataKey="view" stackId="a" fill="#5932EA" />
-            <Bar dataKey="applied" stackId="a" fill="#F2EFFF" />
-          </BarChart>
-        </ResponsiveContainer> */}
+       
 
         <ResponsiveContainer width="100%" height="85%">
           <BarChart
@@ -169,9 +159,7 @@ export default function Page() {
             <Bar dataKey="applied" stackId="a" fill="#F2EFFF" />
           </BarChart>
         </ResponsiveContainer>
-        {/* <div className="h-[300px] md:h-[400px] lg:h-[500px]">
-          <BarChartShad />
-        </div> */}
+  
       </div>
       <div className="mt-6 grid sm:grid-cols-1 md:grid-cols-[2fr_1fr] gap-10 w-full">
         <div className=" bg-white shadow-md py-5 px-6 pb-10 rounded-[6px]">
@@ -248,6 +236,7 @@ export default function Page() {
             </table>
           </div>
         </div>
+        {/* pie chart */}
         <div className="shadow-md bg-white p-2 px-6 rounded-[6px] w-full">
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
