@@ -16,7 +16,7 @@ export default function Header() {
         <input
           type="text"
           placeholder="Search..."
-          className="border border-white rounded-md px-10 py-2 w-full focus:outline-none focus:ring-2 focus:ring-white"
+          className="border  border-white rounded-md px-10 py-2 w-full focus:outline-none focus:ring-2 focus:ring-white"
         />
         <img
           src="/search.svg"
