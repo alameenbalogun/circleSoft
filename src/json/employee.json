@@ -152,9 +152,11 @@
     "jobTitle": "UI/UX Designer",
     "lineManager": "@Pristucandro",
     "office": "Tech",
-    "employeeStatus": "onleave",
+    "employeeStatus": "onboarding",
+    "account": "activated"
   },
   {
+    "name": "Benjamin Wright",
     "department": "Engineering",
     "age": 28,
     "growth": "+77%",
