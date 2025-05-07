@@ -22,8 +22,8 @@ export default function SideBar() {
     }`;
 
   return (
-    <div className="top-[66px] shadow-sm !h-[calc(100vh-66px)] bg-white flex flex-col overflow-y-auto">
-      <div className="flex gap-2 md:gap-5 xl:gap-10 px-2 md:px-5 xl:px-10 p-6">
+    <div className="top-[66px] shadow-sm !h-[calc(100vh-64px)] bg-white flex flex-col overflow-y-auto">
+      <div className="flex gap-2 md:gap-5 xl:gap-12 px-2 md:px-5 xl:!px-10 p-6 mb-5">
         <div className="flex gap-2 xl:!gap-3 items-center">
           <img src="/gavano.svg" alt="Gavano Image" width={40} />
           <div>
@@ -37,33 +37,45 @@ export default function SideBar() {
       <div className="flex flex-col flex-grow justify-between">
         <div>
           <ul className="mb-4 cursor-pointer">
-            <Link href="/" className={linkClass("/")}>
+            <Link href="/" className={`${linkClass("/")} pl-10`}>
               <LuLayoutDashboard className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Dashboard</p>
             </Link>
-            <Link href="/finance" className={linkClass("/finance")}>
+            <Link href="/finance" className={`${linkClass("/finance")} pl-10`}>
               <MdInsertChartOutlined className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Finance</p>
             </Link>
-            <Link href="/calendar" className={linkClass("/calendar")}>
+            <Link
+              href="/calendar"
+              className={`${linkClass("/calendar")} pl-10`}
+            >
               <LuCalendarDays className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Calendar</p>
             </Link>
 
             <div className="mt-6">
-              <h2 className="text-[16px] font-semibold text-gray-500 px-5 xl:px-10 mb-2 uppercase">
+              <h2 className="text-[16px] font-semibold text-gray-500 px-5 xl:px-10 mb-2 uppercase pl-10">
                 Recruitment
               </h2>
 
-              <Link href="/employee" className={linkClass("/employee")}>
+              <Link
+                href="/employee"
+                className={`${linkClass("/employee")} pl-10`}
+              >
                 <LiaIdCard className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Employees</p>
               </Link>
-              <Link href="/company" className={linkClass("/company")}>
+              <Link
+                href="/company"
+                className={`${linkClass("/company")} pl-10`}
+              >
                 <TbBriefcase className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Company</p>
               </Link>
-              <Link href="/candidate" className={linkClass("/candidate")}>
+              <Link
+                href="/candidate"
+                className={`${linkClass("/candidate")} pl-10`}
+              >
                 <IoIosContact className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Candidate</p>
               </Link>
@@ -73,11 +85,14 @@ export default function SideBar() {
           <hr className="bg-[#E0E0E0] h-[1px] border-0" />
 
           <ul className="mt-3 cursor-pointer">
-            <Link href="/profile" className={linkClass("/profile")}>
+            <Link href="/profile" className={`${linkClass("/profile")} pl-10`}>
               <BsPerson className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Profile</p>
             </Link>
-            <Link href="/settings" className={linkClass("/settings")}>
+            <Link
+              href="/settings"
+              className={`${linkClass("/settings")} pl-10`}
+            >
               <IoSettingsOutline className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Settings</p>
             </Link>
@@ -89,7 +104,7 @@ export default function SideBar() {
           <ul className="cursor-pointer">
             <Link
               href="/logout"
-              className="flex items-center gap-4 p-2 px-5 xl:px-10 bg-red-500 text-white hover:bg-white h-[50px] hover:text-red-500"
+              className="flex items-center gap-4 p-2 px-5 xl:px-10 bg-red-500 text-white hover:bg-white h-[50px] hover:text-red-500 pl-10"
             >
               <CiLogout className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Logout</p>
