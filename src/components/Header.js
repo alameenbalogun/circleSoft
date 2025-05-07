@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="sticky top-0 w-screen grid grid-cols-[auto_1fr_auto] items-center gap-28 p-3 !px-10 bg-white shadow-sm z-20">
+    <div className="sticky top-0 w-screen grid grid-cols-[auto_1fr_auto] h-16 items-center gap-28 p-3 !px-10 bg-white shadow-sm z-20">
       <div className="flex gap-1 items-center">
         <div className="flex justify-center items-center">
           <img src="./logo-1.svg" alt="Side Logo" className="" />
@@ -8,7 +8,7 @@ export default function Header() {
         </div>
 
         <h3 className="text-xl font-sans">
-          Circle <span className="font-bold">Soft</span>
+          Cloud <span className="font-bold">Edge</span>
         </h3>
       </div>
 

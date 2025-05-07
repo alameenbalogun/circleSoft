@@ -14,25 +14,21 @@ export default function Page() {
     <PageLayout>
       <div className="bg-white shadow-sm p-6">
         {/*Header */}
-        <div className="flex justify-between items-center mb-5 mt-4 ">
+        <div className="flex justify-between items-center mb-10">
           <div>
-            <h1 className="text-xl text-black font-extrabold leading-normal -tracking-tight uppercase">Employees</h1>
-            <p className="text-gray-500">Manage your employees</p>
+            <h1 className="text-3xl text-black font-extrabold leading-normal uppercase">
+              Employees
+            </h1>
+            <p className="text-gray-500 text-sm">Manage your employees</p>
           </div>
 
-          <div>
-            <button
-              type="button"
-              className="text-black  hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-gray-100 dark:hover:bg-gray-300 dark:focus:ring-gray-100 gap-1 "
-            >
-              <LiaFileDownloadSolid className="w-4 h-4 object-cover" />
+          <div className="flex justify-start items-center gap-3">
+            <button className="text-black cursor-pointer hover:bg-gray-700 hover:text-white border-gray-700 border-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-100 dark:hover:bg-gray-300 dark:focus:ring-gray-100 gap-1 ">
+              <LiaFileDownloadSolid className="w-5 h-5 object-cover" />
               Download
             </button>
-            <button
-              type="button"
-              className="text-white  hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-1 "
-            >
-              <HiMiniPlus className="w-4 h-4 object-cover" />
+            <button className="text-white cursor-pointer fo border border-transparent bg-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 hover:border-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-1">
+              <HiMiniPlus className="w-5 h-5 object-cover" />
               Add New
             </button>
           </div>
@@ -58,7 +54,7 @@ export default function Page() {
             <thead className="text-x uppercase bg-gray-50 ">
               <tr>
                 <th scope="col" className="px-6 py-3 font-semibold">
-                  <div className="flex items-center gap-3 justify-between">
+                  <div className="flex items-center gap-3 justify-normal">
                     <div className="flex gap-3">
                       {" "}
                       <CheckBox />
@@ -67,26 +63,26 @@ export default function Page() {
                     <HiArrowsUpDown className="" />
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-3 font-semibold">
-                  <div className="flex items-center justify-between">
+                <th scope="col" className="px-6 py-3 font-semibold text-center">
+                  <div className="flex items-center justify-normal gap-3">
                     Job Title
                     <HiArrowsUpDown />
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-3 font-semibold">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-normal gap-3">
                     Line Manager
                     <HiArrowsUpDown />
                   </div>{" "}
                 </th>
                 <th scope="col" className="px-6 py-3 font-semibold">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-normal gap-3">
                     Department
                     <HiArrowsUpDown />
                   </div>{" "}
                 </th>
                 <th scope="col" className="px-6 py-3 font-semibold">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-normal gap-3">
                     Office
                     <HiArrowsUpDown />
                   </div>{" "}
@@ -95,7 +91,7 @@ export default function Page() {
                   Employee Status
                 </th>
                 <th scope="col" className="px-6 py-3 font-semibold">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-normal gap-3">
                     Account
                     <HiArrowsUpDown />
                   </div>{" "}
@@ -127,21 +123,21 @@ export default function Page() {
                   <td className="px-6 py-4">{employee.office}</td>
                   <td className={`px-6 py-4  `}>
                     <p
-                      className={`p-2 text-white !w-24 text-center uppercase font-semibold text-xs rounded ${
+                      className={`p-2 text-white w-3/4 text-center uppercase font-semibold text-xs rounded ${
                         employee.employeeStatus === "active"
-                          ? "bg-green-600"
+                          ? "bg-green-500"
                           : employee.employeeStatus === "onboarding"
-                          ? "bg-yellow-600"
+                          ? "bg-yellow-500"
                           : employee.employeeStatus === "onleave"
-                          ? "bg-gray-600"
-                          : "bg-blue-700"
+                          ? "bg-gray-500"
+                          : "bg-blue-500"
                       } `}
                     >
                       {" "}
                       {employee.employeeStatus}
                     </p>
                   </td>
-                  <td className="px-6 py-4">{employee.account}</td>
+                  <td className="px-6 py-4 capitalize">{employee.account}</td>
                 </tr>
               ))}
             </tbody>
