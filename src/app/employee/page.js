@@ -102,13 +102,14 @@ export default function Page() {
                 </th>
               </tr>
             </thead>
+
             <tbody>
               {employee.map((employee, idx) => (
                 <tr
                   key={idx}
                   className="odd:bg-white  even:bg-gray-5 border-gray-200"
                 >
-                  <th
+                  <td
                     scope="row"
                     className="px-6 py-4 font-medium  whitespace-nowrap dark:text-black flex justify-normal gap-1 items-center"
                   >
@@ -120,12 +121,12 @@ export default function Page() {
                       alt={employee.name}
                     />
                     {employee.name}
-                  </th>
+                  </td>
                   <td className="px-6 py-4">{employee.jobTitle}</td>
                   <td className="px-6 py-4">{employee.lineManager}</td>
                   <td className="px-6 py-4">{employee.department}</td>
                   <td className="px-6 py-4">{employee.office}</td>
-                  <td className={`px-6 py-4  `}>
+                  <td className={`px-6 py-4 `}>
                     <p
                       className={`p-2 text-white !w-24 text-center uppercase font-semibold text-xs rounded ${
                         employee.employeeStatus === "active"
@@ -139,7 +140,7 @@ export default function Page() {
                     >
                       {" "}
                       {employee.employeeStatus}
-                    </p>
+                    </p>,
                   </td>
                   <td className="px-6 py-4">{employee.account}</td>
                 </tr>
