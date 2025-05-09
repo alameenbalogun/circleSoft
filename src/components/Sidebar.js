@@ -2,14 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MdInsertChartOutlined } from "react-icons/md";
-import { LuLayoutDashboard, LuCalendarDays } from "react-icons/lu";
-import { LiaIdCard } from "react-icons/lia";
-import { TbBriefcase } from "react-icons/tb";
-import { IoIosContact } from "react-icons/io";
-import { BsPerson } from "react-icons/bs";
-import { IoSettingsOutline } from "react-icons/io5";
-import { CiLogout } from "react-icons/ci";
+import { MdSpaceDashboard } from "react-icons/md";
+import { BsBriefcaseFill, BsFillCreditCard2FrontFill } from "react-icons/bs";
+import { FaCalendarAlt, FaClipboardList, FaCog, FaIdBadge, FaSignOutAlt } from "react-icons/fa";
+import { FaCircleUser } from "react-icons/fa6";
+import { FaUserAlt } from "react-icons/fa";
 
 export default function SideBar() {
   const pathname = usePathname();
@@ -38,16 +35,21 @@ export default function SideBar() {
         <div>
           <ul className="mb-4 cursor-pointer">
             <Link href="/" className={linkClass("/")}>
-              <LuLayoutDashboard className="w-6 h-6 object-cover" />
+              <MdSpaceDashboard className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Dashboard</p>
             </Link>
             <Link href="/finance" className={linkClass("/finance")}>
-              <MdInsertChartOutlined className="w-6 h-6 object-cover" />
+              <BsFillCreditCard2FrontFill className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Finance</p>
             </Link>
             <Link href="/calendar" className={linkClass("/calendar")}>
-              <LuCalendarDays className="w-6 h-6 object-cover" />
+              <FaCalendarAlt className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Calendar</p>
+            </Link>
+
+            <Link href="/report" className={linkClass("/report")}>
+              <FaClipboardList className="w-6 h-6 object-cover" />
+              <p className="text-[16px]">Report</p>
             </Link>
 
             <div className="mt-6">
@@ -56,15 +58,15 @@ export default function SideBar() {
               </h2>
 
               <Link href="/employee" className={linkClass("/employee")}>
-                <LiaIdCard className="w-6 h-6 object-cover" />
+                <FaIdBadge className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Employees</p>
               </Link>
               <Link href="/company" className={linkClass("/company")}>
-                <TbBriefcase className="w-6 h-6 object-cover" />
+                <BsBriefcaseFill className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Company</p>
               </Link>
               <Link href="/candidate" className={linkClass("/candidate")}>
-                <IoIosContact className="w-6 h-6 object-cover" />
+                <FaCircleUser className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Candidate</p>
               </Link>
             </div>
@@ -74,11 +76,11 @@ export default function SideBar() {
 
           <ul className="mt-3 cursor-pointer">
             <Link href="/profile" className={linkClass("/profile")}>
-              <BsPerson className="w-6 h-6 object-cover" />
+              <FaUserAlt className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Profile</p>
             </Link>
             <Link href="/settings" className={linkClass("/settings")}>
-              <IoSettingsOutline className="w-6 h-6 object-cover" />
+              <FaCog className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Settings</p>
             </Link>
           </ul>
@@ -91,7 +93,7 @@ export default function SideBar() {
               href="/logout"
               className="flex items-center gap-4 p-2 px-5 xl:px-10 bg-red-500 text-white hover:bg-white h-[50px] hover:text-red-500"
             >
-              <CiLogout className="w-6 h-6 object-cover" />
+              <FaSignOutAlt className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Logout</p>
             </Link>
           </ul>

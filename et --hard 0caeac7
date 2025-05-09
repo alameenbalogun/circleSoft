@@ -1,0 +1,32 @@
+[33m5692182[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m)[m HEAD@{0}: pull origin dev: Merge made by the 'ort' strategy.
+[33m0caeac7[m HEAD@{1}: commit: changes before pull
+[33m7c0cead[m HEAD@{2}: checkout: moving from dev to dev
+[33m7c0cead[m HEAD@{3}: checkout: moving from sidebar to dev
+[33m90f56b8[m[33m ([m[1;31morigin/sidebar[m[33m, [m[1;32msidebar[m[33m, [m[1;32mcelz-branch[m[33m)[m HEAD@{4}: checkout: moving from dev to sidebar
+[33m7c0cead[m HEAD@{5}: checkout: moving from sidebar to dev
+[33m90f56b8[m[33m ([m[1;31morigin/sidebar[m[33m, [m[1;32msidebar[m[33m, [m[1;32mcelz-branch[m[33m)[m HEAD@{6}: checkout: moving from celz-branch to sidebar
+[33m90f56b8[m[33m ([m[1;31morigin/sidebar[m[33m, [m[1;32msidebar[m[33m, [m[1;32mcelz-branch[m[33m)[m HEAD@{7}: checkout: moving from celz-branch to celz-branch
+[33m90f56b8[m[33m ([m[1;31morigin/sidebar[m[33m, [m[1;32msidebar[m[33m, [m[1;32mcelz-branch[m[33m)[m HEAD@{8}: merge dev: Merge made by the 'ort' strategy.
+[33m1ed45af[m[33m ([m[1;31morigin/celz-branch[m[33m)[m HEAD@{9}: checkout: moving from dev to celz-branch
+[33m7c0cead[m HEAD@{10}: pull origin dev: Fast-forward
+[33m27395ce[m HEAD@{11}: checkout: moving from celz-branch to dev
+[33m1ed45af[m[33m ([m[1;31morigin/celz-branch[m[33m)[m HEAD@{12}: commit: update sidebar styling
+[33md23997b[m HEAD@{13}: commit: Moved logout button to bottom of sidebar
+[33m7e59c44[m HEAD@{14}: commit (merge): Resolved merge conflicts between dev and celz-branch
+[33m64aeef5[m HEAD@{15}: checkout: moving from celz-branch to celz-branch
+[33m64aeef5[m HEAD@{16}: commit (merge): Merged dev into celz-branch and resolved conflicts
+[33m753c3a6[m HEAD@{17}: checkout: moving from dev to celz-branch
+[33m27395ce[m HEAD@{18}: commit: updated sidebar
+[33m92a8d78[m HEAD@{19}: commit (merge): resolved merge conflict
+[33m2cd3e78[m HEAD@{20}: commit: local change before pulling latest dev
+[33m75ee3d0[m HEAD@{21}: pull origin dev: updating HEAD
+[33m75ee3d0[m HEAD@{22}: checkout: moving from dev to dev
+[33m75ee3d0[m HEAD@{23}: checkout: moving from dev to dev
+[33m75ee3d0[m HEAD@{24}: pull origin dev: Merge made by the 'ort' strategy.
+[33m97276e3[m HEAD@{25}: commit: Updated page.js with latest UI changes
+[33m3bab13e[m HEAD@{26}: checkout: moving from celz-branch to dev
+[33m753c3a6[m HEAD@{27}: commit (merge): Resolved merge conflict in Sidebar.js
+[33md7367ad[m HEAD@{28}: checkout: moving from celz-branch to celz-branch
+[33md7367ad[m HEAD@{29}: commit: aligning the logout button
+[33mb1191fb[m[33m ([m[1;32mmain[m[33m)[m HEAD@{30}: checkout: moving from main to celz-branch
+[33mb1191fb[m[33m ([m[1;32mmain[m[33m)[m HEAD@{31}: clone: from https://github.com/alameenbalogun/circleSoft.git
