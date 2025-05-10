@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="relative bg-[#f8f8f8] w-full overflow-hidden h-dvh">
         <Header />
-        <div className="flex justify-normal items-start w-full h-dvh relative top-16">
+        <div className="flex justify-normal items-start w-full h-dvh relative ">
           <div className="h-full !max-w-[15%] !w-full !overflow-hidden">
             <SideBar />
           </div>

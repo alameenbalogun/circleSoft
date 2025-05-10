@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MdInsertChartOutlined } from "react-icons/md";
-import { LuLayoutDashboard, LuCalendarDays } from "react-icons/lu";
-import { LiaIdCard } from "react-icons/lia";
-import { TbBriefcase } from "react-icons/tb";
-import { IoIosContact } from "react-icons/io";
-import { BsPerson } from "react-icons/bs";
-import { IoSettingsOutline } from "react-icons/io5";
+import { MdSpaceDashboard } from "react-icons/md";
+import { BsBriefcaseFill, BsFillCreditCard2FrontFill } from "react-icons/bs";
+import { FaCalendarAlt, FaClipboardList, FaCog, FaIdBadge, FaSignOutAlt } from "react-icons/fa";
+import { FaCircleUser } from "react-icons/fa6";
+import { FaUserAlt } from "react-icons/fa";
+
 import { CiLogout } from "react-icons/ci";
 
 export default function SideBar() {
@@ -38,18 +37,18 @@ export default function SideBar() {
         <div>
           <ul className="mb-4 cursor-pointer">
             <Link href="/" className={`${linkClass("/")} pl-10`}>
-              <LuLayoutDashboard className="w-6 h-6 object-cover" />
+              <MdSpaceDashboard className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Dashboard</p>
             </Link>
-            <Link href="/finance" className={`${linkClass("/finance")} pl-10`}>
-              <MdInsertChartOutlined className="w-6 h-6 object-cover" />
+            <Link href="/finance" className={`${linkClass("/finance")} pl-10`}> 
+              <BsFillCreditCard2FrontFill className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Finance</p>
             </Link>
             <Link
               href="/calendar"
               className={`${linkClass("/calendar")} pl-10`}
             >
-              <LuCalendarDays className="w-6 h-6 object-cover" />
+              <FaCalendarAlt className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Calendar</p>
             </Link>
 
@@ -62,22 +61,26 @@ export default function SideBar() {
                 href="/employee"
                 className={`${linkClass("/employee")} pl-10`}
               >
-                <LiaIdCard className="w-6 h-6 object-cover" />
+                <FaIdBadge className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Employees</p>
               </Link>
               <Link
                 href="/company"
                 className={`${linkClass("/company")} pl-10`}
               >
-                <TbBriefcase className="w-6 h-6 object-cover" />
+                <BsBriefcaseFill className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Company</p>
               </Link>
               <Link
                 href="/candidate"
                 className={`${linkClass("/candidate")} pl-10`}
               >
-                <IoIosContact className="w-6 h-6 object-cover" />
+                <FaCircleUser className="w-6 h-6 object-cover" />
                 <p className="text-[16px]">Candidate</p>
+              </Link>
+              <Link href="/report" className={`${linkClass("/report")} pl-10`}>
+                <FaClipboardList className="w-6 h-6 object-cover" />
+                <p className="text-[16px]">Report</p>
               </Link>
             </div>
           </ul>
@@ -86,14 +89,14 @@ export default function SideBar() {
 
           <ul className="mt-3 cursor-pointer">
             <Link href="/profile" className={`${linkClass("/profile")} pl-10`}>
-              <BsPerson className="w-6 h-6 object-cover" />
+              <FaUserAlt className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Profile</p>
             </Link>
             <Link
               href="/settings"
               className={`${linkClass("/settings")} pl-10`}
             >
-              <IoSettingsOutline className="w-6 h-6 object-cover" />
+              <FaCog className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Settings</p>
             </Link>
           </ul>
@@ -106,7 +109,7 @@ export default function SideBar() {
               href="/logout"
               className="flex items-center gap-4 p-2 px-5 xl:px-10 bg-red-500 text-white hover:bg-white h-[50px] hover:text-red-500 pl-10"
             >
-              <CiLogout className="w-6 h-6 object-cover" />
+              <FaSignOutAlt className="w-6 h-6 object-cover" />
               <p className="text-[16px]">Logout</p>
             </Link>
           </ul>
