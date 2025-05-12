@@ -95,6 +95,7 @@ export default function Page() {
             <button className="text-sm text-gray-600 border px-2 py-1 rounded-md">This Month ▼</button>
           </div>
         </div>
+       
 
         <ResponsiveContainer width="100%" height="85%">
           <BarChart
@@ -113,6 +114,7 @@ export default function Page() {
             <Bar dataKey="applied" stackId="a" fill="#F2EFFF" />
           </BarChart>
         </ResponsiveContainer>
+  
       </div>
 
       <div className="mt-6 grid sm:grid-cols-1 md:grid-cols-[2fr_1fr] gap-10 w-full">
@@ -168,7 +170,7 @@ export default function Page() {
             </table>
           </div>
         </div>
-
+        {/* pie chart */}
         <div className="shadow-md bg-white p-2 px-6 rounded-[6px] w-full">
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">Employee Composition</h1>
           <div className="w-full h-[400px] object-cover scale-100 md:scale-125 lg:scale-130 xl:scale-150 2xl:scale-200">
