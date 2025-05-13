@@ -1,5 +1,6 @@
 import PageLayout from "@/src/components/PageLayout";
 import ReportCard from "@/src/components/ReportCard";
+import Link from "next/link";
 import {
   FaBriefcase,
   FaCalendarAlt,
@@ -10,6 +11,7 @@ import {
   FaUserPlus,
   FaUsers,
 } from "react-icons/fa";
+
 
 const reportData = [
   {
@@ -32,6 +34,7 @@ const reportData = [
     icon: FaCalendarAlt,
     title: "Time Off Balance",
     description: "An overview of employees' time off balance.",
+    href: "/report/offbalance",
   },
   {
     icon: FaBriefcase,
@@ -47,6 +50,7 @@ const reportData = [
     icon: FaClock,
     title: "Time Off Schedule",
     description: "An overview of employees' time off schedule.",
+    href: "/report/offschedule",
   },
   {
     icon: FaExchangeAlt,
@@ -65,14 +69,24 @@ export default function Page() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-        {reportData.map((item, index) => (
-          <ReportCard
-            key={index}
-            icon={item.icon}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
+        {reportData.map((item, index) => {
+          const card = (
+            <ReportCard
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+            />
+          );
+
+          return item.href ? (
+            <Link href={item.href} key={index} className="block hover:shadow-md transition">
+              {card}
+            </Link>
+          ) : (
+            <div key={index}>{card}</div>
+          );
+        })}
       </div>
     </PageLayout>
   );
