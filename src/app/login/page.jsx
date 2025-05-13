@@ -13,7 +13,7 @@ export default function LoginPage() {
           className="absolute z-10 inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />
 
-        <div className="absolute h-[40%] bg-muted/50 z-40 bottom-0 bg-[#020853] w-full border-t-4 border-gray-900 flex flex-col gap-4 p-8">
+        <div className="absolute h-[40%] xl:h-[30%] bg-muted/50 z-40 bottom-0 bg-[#020853] w-full border-t-4 border-gray-900 flex flex-col gap-4 p-8">
           <div className="flex gap-1 items-center">
             <div className="flex justify-center items-center">
               <img src="./logo-1.svg" alt="Side Logo" className="" />
