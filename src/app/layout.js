@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Circle Soft",
+  title: "KorrEdge",
 };
 
 export default function RootLayout({ children }) {
