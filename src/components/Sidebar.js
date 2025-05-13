@@ -46,7 +46,7 @@ export default function SideBar() {
             .filter((route) => !route.isLogout)
             .map((route, idx) =>
               route.children ? (
-                <li key={idx} className="mt-0 relative pl-0">
+                <li key={idx} className="mt-0 relative pl-0 cursor-pointer">
                   <button
                     onClick={() => toggleSection(route.section)}
                     className={`${linkClass()} w-full flex justify-between items-center cursor-pointer`}
