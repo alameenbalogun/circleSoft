@@ -99,7 +99,7 @@ export function LoginForm({ className, ...props }) {
         </div>
         <Button
           type="submit"
-          className="w-full bg-[#020853] text-white hover:scale-[1.02] h-12 transition-all duration-500 ease-in hover:opacity-80 cursor-pointer"
+          className="w-full bg-[#020853] text-white hover:scale-[1.02] h-12 transition-all duration-200 ease-out hover:opacity-80 cursor-pointer"
         >
           Login
         </Button>
