@@ -6,8 +6,10 @@ import { useRouter } from 'next/navigation'
 export default function HomePage() {
   const router = useRouter()
 
+  
+
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem('loggedIn') === 'false'
+    const isLoggedIn = localStorage.getItem('loggedIn') 
 
     if (isLoggedIn) {
       router.replace('/dashboard')
