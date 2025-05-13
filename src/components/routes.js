@@ -83,3 +83,10 @@ export const sidebarRoutes = [
     isLogout: true,
   },
 ];
+
+export const authRoutes = [
+  {
+    title: "Login",
+    path: "/login",
+  }
+];
