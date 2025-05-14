@@ -12,6 +12,7 @@ import { FcGoogle } from "react-icons/fc";
 export function LoginForm({ className, ...props }) {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
 
   const handleShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -21,11 +22,28 @@ export function LoginForm({ className, ...props }) {
     password: "123456",
   });
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = formData.email;
-    const password = formData.password;
+    const { email, password } = formData;
 
+    if (!validateEmail(email)) {
+      setError("Invalid email.");
+      return;
+    }
+
+    if (!validatePassword(password)) {
+     setError("Password must be at least 6 characters long.");
+    }
+    // Simulate a login request
+    //  send the email and password to the server for authentication
     console.log("Email:", email);
     console.log("Password:", password);
 
@@ -61,6 +79,7 @@ export function LoginForm({ className, ...props }) {
             required
             className="placeholder:text-gray-500 placeholder:text-sm h-12 text-black outline-none focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-none"
           />
+          <p className="text-sm text-red">{error}</p>
         </div>
         <div className="grid gap-2">
           <Label htmlFor="password">
@@ -78,6 +97,8 @@ export function LoginForm({ className, ...props }) {
               required
               className="placeholder:text-gray-500 placeholder:text-sm h-12 text-black outline-none focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-none"
             />
+                      <p className="text-sm text-red">{error}</p>
+
             <button
               onClick={handleShowPassword}
               className="absolute right-2 top-1/2 -translate-y-1/2  rounded-md p-1 text-gray-500 hover:text-gray-700 cursor-pointer"
