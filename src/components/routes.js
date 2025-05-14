@@ -3,22 +3,29 @@ import { IoIosBriefcase, IoIosContact } from "react-icons/io";
 import { MdDashboard } from "react-icons/md";
 import { TbBriefcase } from "react-icons/tb";
 import { BsBriefcaseFill } from "react-icons/bs";
-import { FaCalendarAlt, FaClipboardList, FaCog, FaIdBadge, FaSignOutAlt, FaUserAlt } from "react-icons/fa";
+import {
+  FaCalendarAlt,
+  FaClipboardList,
+  FaCog,
+  FaIdBadge,
+  FaSignOutAlt,
+  FaUserAlt,
+} from "react-icons/fa";
 
 export const sidebarRoutes = [
   {
     title: "Dashboard",
-    path: "/",
+    path: "/dashboard",
     icon: <MdDashboard className="w-6 h-6 object-cover" />,
   },
   {
     title: "Finance",
-    path: "/finance",
+    path: "/dashboard/finance",
     icon: <BiSolidReport className="w-6 h-6 object-cover" />,
   },
   {
     title: "Calendar",
-    path: "/calendar",
+    path: "/dashboard/calendar",
     icon: <FaCalendarAlt className="w-6 h-6 object-cover" />,
   },
   {
@@ -26,29 +33,29 @@ export const sidebarRoutes = [
     children: [
       {
         title: "Manage Employees",
-        path: "/employee",
+        path: "/dashboard/employee",
         icon: <FaIdBadge className="w-6 h-6 object-cover" />,
       },
       {
         title: "Directory",
-        path: "/company",
+        path: "/dashboard/company",
         icon: <TbBriefcase className="w-6 h-6 object-cover" />,
       },
       {
         title: "Candidate",
-        path: "/candidate",
+        path: "/dashboard/candidate",
         icon: <IoIosContact className="w-6 h-6 object-cover" />,
       },
     ],
   },
   {
     title: "Profile",
-    path: "/profile",
+    path: "/dashboard/profile",
     icon: <FaUserAlt className="w-6 h-6 object-cover" />,
   },
   {
     title: "Report",
-    path: "/report",
+    path: "/dashboard/report",
     icon: <FaClipboardList className="w-6 h-6 object-cover" />,
   },
   {
@@ -56,24 +63,24 @@ export const sidebarRoutes = [
     children: [
       {
         title: "Jobs",
-        path: "/employee",
+        path: "/dashboard/employee",
         icon: <IoIosBriefcase className="w-6 h-6 object-cover" />,
       },
       {
         title: "Candidates",
-        path: "/company",
+        path: "/dashboard/company",
         icon: <BsBriefcaseFill className="w-6 h-6 object-cover" />,
       },
       {
         title: "Settings",
-        path: "/candidate",
+        path: "/dashboard/candidate",
         icon: <IoIosContact className="w-6 h-6 object-cover" />,
       },
     ],
   },
   {
     title: "Settings",
-    path: "/settings",
+    path: "/dashboard/settings",
     icon: <FaCog className="w-6 h-6 object-cover" />,
   },
   {
@@ -88,5 +95,5 @@ export const authRoutes = [
   {
     title: "Login",
     path: "/login",
-  }
+  },
 ];
