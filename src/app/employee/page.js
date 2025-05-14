@@ -1,3 +1,5 @@
+"use client";
+
 import PageLayout from "@/src/components/PageLayout";
 
 import { LiaFileDownloadSolid } from "react-icons/lia";
@@ -8,8 +10,10 @@ import Image from "next/image";
 import employee from "@/src/json/employee.json";
 import CheckBox from "@/src/components/button/Checkbox";
 import { HiArrowsUpDown } from "react-icons/hi2";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
   return (
     <PageLayout>
       <div className="bg-white shadow-sm p-6">
@@ -98,15 +102,17 @@ export default function Page() {
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="cursor-pointer">
+              {/* Table Row */}
               {employee.map((employee, idx) => (
                 <tr
                   key={idx}
-                  className="odd:bg-white  even:bg-gray-5 border-gray-200"
+                  onClick={() => router.push(`/employee/${idx}`)}
+                  className="odd:bg-white even:bg-gray-50 border-gray-200 cursor-pointer hover:bg-gray-100"
                 >
                   <td
                     scope="row"
-                    className="px-6 py-4  whitespace-nowrap dark:text-black flex justify-normal gap-1 items-center"
+                    className="px-6 py-4 whitespace-nowrap dark:text-black flex justify-normal gap-1 items-center"
                   >
                     <CheckBox />
                     <Image
@@ -121,7 +127,7 @@ export default function Page() {
                   <td className="px-6 py-4">{employee.lineManager}</td>
                   <td className="px-6 py-4">{employee.department}</td>
                   <td className="px-6 py-4">{employee.office}</td>
-                  <td className={`px-6 py-4  `}>
+                  <td className="px-6 py-4">
                     <p
                       className={`p-2 text-white w-3/4 text-center uppercase font-semibold text-xs rounded ${
                         employee.employeeStatus === "active"
@@ -131,9 +137,8 @@ export default function Page() {
                           : employee.employeeStatus === "onleave"
                           ? "bg-gray-500"
                           : "bg-blue-500"
-                      } `}
+                      }`}
                     >
-                      {" "}
                       {employee.employeeStatus}
                     </p>
                   </td>
