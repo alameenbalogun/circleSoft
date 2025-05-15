@@ -3,7 +3,14 @@ import { IoIosBriefcase, IoIosContact } from "react-icons/io";
 import { MdDashboard } from "react-icons/md";
 import { TbBriefcase } from "react-icons/tb";
 import { BsBriefcaseFill } from "react-icons/bs";
-import { FaCalendarAlt, FaClipboardList, FaCog, FaIdBadge, FaSignOutAlt, FaUserAlt } from "react-icons/fa";
+import {
+  FaCalendarAlt,
+  FaClipboardList,
+  FaCog,
+  FaIdBadge,
+  FaSignOutAlt,
+  FaUserAlt,
+} from "react-icons/fa";
 
 export const sidebarRoutes = [
   {
@@ -73,7 +80,7 @@ export const sidebarRoutes = [
   },
   {
     title: "Settings",
-    path: "/settings",
+    path: "/dashboard/settings",
     icon: <FaCog className="w-6 h-6 object-cover" />,
   },
   {
@@ -88,5 +95,5 @@ export const authRoutes = [
   {
     title: "Login",
     path: "/login",
-  }
+  },
 ];

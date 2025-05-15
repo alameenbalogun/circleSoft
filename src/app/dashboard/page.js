@@ -20,9 +20,24 @@ import JobCard from "@/src/components/JobCard";
 import employees from "@/src/json/employee.json";
 import Image from "next/image";
 import PageLayout from "@/src/components/PageLayout";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+import Spinner from "@/src/components/Spinner";
+
+const fetchEmployees = async () => {
+  const res = await axios.get("https://dummyjson.com/users");
+  return res.data;
+};
 
 export default function Page() {
-  const data = [
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["employees"],
+    queryFn: fetchEmployees,
+  });
+
+  console.log(data);
+
+  const data1 = [
     { month: "Jan", view: 45, applied: 15 },
     { month: "Feb", view: 60, applied: 20 },
     { month: "Mar", view: 70, applied: 20 },
@@ -75,10 +90,36 @@ export default function Page() {
   return (
     <PageLayout>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-8 xl:!gap-10 mb-16">
-        <JobCard title="Total Employees" icon="/tradeSignal.svg" percentage={10.0} number={856} description="Employee" />
-        <JobCard title="Job Views" icon="/tradeSignal.svg" percentage={22.0} number={3342} description="Viewers" />
-        <JobCard title="Job Applied" icon="/tradeSignal.svg" percentage={12.0} number={77} description="Applicants" />
-        <JobCard title="Resigned Employees" icon="/tradeRed.svg" percentage={7.0} number={856} description="Employee" bgColor="#C10A0A26" color="#C71026" />
+        <JobCard
+          title="Total Employees"
+          icon="/tradeSignal.svg"
+          percentage={10.0}
+          number={856}
+          description="Employee"
+        />
+        <JobCard
+          title="Job Views"
+          icon="/tradeSignal.svg"
+          percentage={22.0}
+          number={3342}
+          description="Viewers"
+        />
+        <JobCard
+          title="Job Applied"
+          icon="/tradeSignal.svg"
+          percentage={12.0}
+          number={77}
+          description="Applicants"
+        />
+        <JobCard
+          title="Resigned Employees"
+          icon="/tradeRed.svg"
+          percentage={7.0}
+          number={856}
+          description="Employee"
+          bgColor="#C10A0A26"
+          color="#C71026"
+        />
       </div>
 
       <div className="shadow-sm bg-white mt-6 h-[50vh] rounded pb-10 !p-5 mb-16">
@@ -93,14 +134,15 @@ export default function Page() {
               <div className="h-4 w-4 bg-[#5932EA]"></div>
               <p className="text-[14px]">Job Applied</p>
             </div>
-            <button className="text-sm text-gray-600 border px-2 py-1 rounded-md">This Month ▼</button>
+            <button className="text-sm text-gray-600 border px-2 py-1 rounded-md">
+              This Month ▼
+            </button>
           </div>
         </div>
-       
 
         <ResponsiveContainer width="100%" height="85%">
           <BarChart
-            data={data}
+            data={data1}
             margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
             barSize={40}
             barGap={20}
@@ -115,65 +157,98 @@ export default function Page() {
             <Bar dataKey="applied" stackId="a" fill="#F2EFFF" />
           </BarChart>
         </ResponsiveContainer>
-  
       </div>
 
       <div className="mt-6 grid sm:grid-cols-1 md:grid-cols-[2fr_1fr] gap-10 w-full">
         <div className="bg-white shadow-md py-5 px-6 pb-10 rounded-[6px]">
           <div className="flex items-center justify-between mb-10">
-            <h1 className="font-bold text-[#343434] text-[14px] mt-4">Employee Status</h1>
+            <h1 className="font-bold text-[#343434] text-[14px] mt-4">
+              Employee Status
+            </h1>
             <div className="flex items-center rounded-md gap-1 bg-white shadow-md p-2">
-              <p className="text-[12px] font-bold text-[#1A2B88]">Filter & Short</p>
+              <p className="text-[12px] font-bold text-[#1A2B88]">
+                Filter & Short
+              </p>
               <img src="/filter.svg" alt="Filter" width={15} />
             </div>
           </div>
 
           <div className="relative overflow-x-auto overflow-y-auto h-100 shadow-md sm:rounded-lg pb-5">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" className="px-6 py-3">Employee Name</th>
-                  <th scope="col" className="px-6 py-3">Department</th>
-                  <th scope="col" className="px-6 py-3">Age</th>
-                  <th scope="col" className="px-6 py-3">Discipline</th>
-                  <th scope="col" className="px-6 py-3">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {employees.map((employee, idx) => (
-                  <tr
-                    key={idx}
-                    className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700 border-gray-200"
-                  >
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-1 items-center">
-                      <Image src="leo.svg" width={30} height={30} alt={employee.name} />
-                      {employee.name}
+            {isLoading ? (
+              <div className="flex justify-center items-center h-full w-full">
+                <Spinner />
+              </div>
+            ) : error ? (
+              <p className="bg-red-500">{error}</p>
+            ) : data?.users?.length > 0 ? (
+              <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                    <th scope="col" className="px-6 py-3">
+                      Employee Name
                     </th>
-                    <td className="px-6 py-4">{employee.department}</td>
-                    <td className="px-6 py-4">{employee.age}</td>
-                    <td className="px-6 py-4">{employee.growth}</td>
-                    <td className="px-6 py-4">
-                      <p
-                        className={`p-2 text-white !w-24 text-center font-semibold text-xs rounded ${
-                          employee.employmentType === "Permanent"
-                            ? "bg-green-600"
-                            : employee.employmentType === "Contract"
-                            ? "bg-yellow-600"
-                            : "bg-blue-700"
-                        }`}
-                      >
-                        {employee.employmentType}
-                      </p>
-                    </td>
+                    <th scope="col" className="px-6 py-3">
+                      Department
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Age
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Discipline
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Status
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {data?.users?.map((employee, idx) => (
+                    <tr
+                      key={idx}
+                      className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700 border-gray-200"
+                    >
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-1 items-center"
+                      >
+                        <Image
+                          src={employee?.image}
+                          width={30}
+                          height={30}
+                          alt={employee.name}
+                        />
+                        {employee.firstName + " " + employee.lastName}
+                      </th>
+                      <td className="px-6 py-4">{employee?.comppany?.title}</td>
+                      <td className="px-6 py-4">{employee.age}</td>
+                      <td className="px-6 py-4">{employee.growth}</td>
+                      <td className="px-6 py-4">
+                        <p
+                          className={`p-2 text-white !w-24 text-center font-semibold text-xs rounded ${
+                            employee.employmentType === "Permanent"
+                              ? "bg-green-600"
+                              : employee.employmentType === "Contract"
+                              ? "bg-yellow-600"
+                              : "bg-blue-700"
+                          }`}
+                        >
+                          {employee.employmentType}
+                        </p>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <p>No data found</p>
+            )}
           </div>
         </div>
         {/* pie chart */}
         <div className="shadow-md bg-white p-2 px-6 rounded-[6px] w-full">
-          <h1 className="font-bold text-[#343434] text-[14px] mt-5">Employee Composition</h1>
+          <h1 className="font-bold text-[#343434] text-[14px] mt-5">
+            Employee Composition
+          </h1>
           <div className="w-full h-[400px] object-cover scale-100 md:scale-125 lg:scale-130 xl:scale-150 2xl:scale-200">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -188,7 +263,10 @@ export default function Page() {
                   label={renderCustomizedLabel}
                 >
                   {data2.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
                   ))}
                 </Pie>
               </PieChart>
@@ -200,5 +278,3 @@ export default function Page() {
     </PageLayout>
   );
 }
-
-
