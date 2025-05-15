@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }) {
         <div className="h-full !max-w-[15%] !w-full !overflow-hidden">
           <SideBar />
         </div>
-        <div className="h-full max-w-[85%] w-full overflow-y-scroll overflow-hidden p-10 pb-24">
+        <div className="h-full max-w-[85%] w-full overflow-y-scroll overflow-hidden p-10 pb-16">
           <Suspense fallback={<Spinner />}>{children}</Suspense>
         </div>
       </div>
