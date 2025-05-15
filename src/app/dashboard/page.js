@@ -17,25 +17,65 @@ import {
 import { FaMale, FaFemale } from "react-icons/fa";
 // import PageLayout from "@/components/PageLayout";
 import JobCard from "@/src/components/JobCard";
-import employees from "@/src/json/employee.json";
 import Image from "next/image";
 import PageLayout from "@/src/components/PageLayout";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import Spinner from "@/src/components/Spinner";
+import { useState } from "react";
+import { PaginationControls } from "@/src/resuable/Paginations";
 
-const fetchEmployees = async () => {
-  const res = await axios.get("https://dummyjson.com/users");
+const fetchEmployees = async ({ queryKey }) => {
+  const [_key, page] = queryKey;
+  const USERS_PER_PAGE = 10;
+  const skip = (page - 1) * USERS_PER_PAGE;
+  const res = await axios.get(
+    `https://dummyjson.com/users?limit=${USERS_PER_PAGE}&skip=${skip}`
+  );
+  return res.data;
+};
+
+const fetchAllEmployees = async () => {
+  const res = await axios.get("https://dummyjson.com/users?limit=208");
   return res.data;
 };
 
 export default function Page() {
+  const [currentPage, setCurrentPage] = useState(1);
   const { data, isLoading, error } = useQuery({
-    queryKey: ["employees"],
+    queryKey: ["employees", currentPage],
     queryFn: fetchEmployees,
+    keepPreviousData: true,
   });
 
-  console.log(data);
+  const {
+    data: allData,
+    isLoading: isLoadingAll,
+    error: errorAll,
+  } = useQuery({
+    queryKey: ["allEmployees"],
+    queryFn: fetchAllEmployees,
+  });
+
+  console.log("all", allData);
+
+  const genderCounts = allData?.users?.reduce(
+    (acc, employee) => {
+      if (employee.gender === "female") {
+        acc.female += 1;
+      } else if (employee.gender === "male") {
+        acc.male += 1;
+      }
+      return acc;
+    },
+    { female: 0, male: 0 }
+  );
+
+  const total = genderCounts?.female + genderCounts?.male;
+  const femalePercentage = ((genderCounts?.female / total) * 100).toFixed(1);
+  const malePercentage = ((genderCounts?.male / total) * 100).toFixed(1);
+
+  console.log({ femalePercentage, malePercentage, total, genderCounts });
 
   const data1 = [
     { month: "Jan", view: 45, applied: 15 },
@@ -53,8 +93,8 @@ export default function Page() {
   ];
 
   const data2 = [
-    { name: "Female", value: 65 },
-    { name: "Male", value: 35 },
+    { name: "Female", value: parseFloat(femalePercentage) },
+    { name: "Male", value: parseFloat(malePercentage) },
   ];
 
   const COLORS = ["#16C098", "#5932EA"];
@@ -173,7 +213,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="relative overflow-x-auto overflow-y-auto h-100 shadow-md sm:rounded-lg pb-5">
+          <div className="relative overflow-x-auto overflow-y-auto h-100  sm:rounded-lg pb-5">
             {isLoading ? (
               <div className="flex justify-center items-center h-full w-full">
                 <Spinner />
@@ -184,19 +224,19 @@ export default function Page() {
               <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-center">
                       Employee Name
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-center">
                       Department
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-center">
                       Age
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-center">
                       Discipline
                     </th>
-                    <th scope="col" className="px-6 py-3">
+                    <th scope="col" className="px-6 py-3 text-center">
                       Status
                     </th>
                   </tr>
@@ -205,34 +245,38 @@ export default function Page() {
                   {data?.users?.map((employee, idx) => (
                     <tr
                       key={idx}
-                      className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700 border-gray-200"
+                      className="odd:bg-white even:bg-gray-50 border-b dark:border-gray-700 border-gray-200 text-center"
                     >
                       <th
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-1 items-center"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex gap-1 items-center justify-start"
                       >
                         <Image
                           src={employee?.image}
                           width={30}
                           height={30}
-                          alt={employee.name}
+                          alt={employee?.image}
                         />
                         {employee.firstName + " " + employee.lastName}
                       </th>
-                      <td className="px-6 py-4">{employee?.comppany?.title}</td>
-                      <td className="px-6 py-4">{employee.age}</td>
-                      <td className="px-6 py-4">{employee.growth}</td>
-                      <td className="px-6 py-4">
+                      <td className="px-6 py-4 text-center">
+                        {employee?.company?.department}
+                      </td>
+                      <td className="px-6 py-4 text-center">{employee.age}</td>
+                      <td className="px-6 py-4 text-center">
+                        {employee.company.title}
+                      </td>
+                      <td className="px-6 py-4 text-center">
                         <p
                           className={`p-2 text-white !w-24 text-center font-semibold text-xs rounded ${
-                            employee.employmentType === "Permanent"
+                            employee.role === "admin"
                               ? "bg-green-600"
-                              : employee.employmentType === "Contract"
+                              : employee.role === "moderator"
                               ? "bg-yellow-600"
                               : "bg-blue-700"
                           }`}
                         >
-                          {employee.employmentType}
+                          {employee.role}
                         </p>
                       </td>
                     </tr>
@@ -243,13 +287,21 @@ export default function Page() {
               <p>No data found</p>
             )}
           </div>
+          <div className="mt-5 mr-auto">
+            <PaginationControls
+              total={data?.total}
+              limit={data?.limit}
+              currentPage={currentPage}
+              onPageChange={setCurrentPage}
+            />
+          </div>
         </div>
         {/* pie chart */}
         <div className="shadow-md bg-white p-2 px-6 rounded-[6px] w-full">
           <h1 className="font-bold text-[#343434] text-[14px] mt-5">
             Employee Composition
           </h1>
-          <div className="w-full h-[400px] object-cover scale-100 md:scale-125 lg:scale-130 xl:scale-150 2xl:scale-200">
+          <div className="w-full h-[400px] object-cover scale-100 md:scale-125 lg:scale-130 xl:scale-150 2xl:scale-210">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
@@ -272,7 +324,9 @@ export default function Page() {
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <h1 className="text-[#949494] text-center">856 Total Employee</h1>
+          <h1 className="text-[#1A2B88] font-semibold text-center">
+            {allData?.users?.length} Total Employee
+          </h1>
         </div>
       </div>
     </PageLayout>
