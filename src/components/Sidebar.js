@@ -21,6 +21,10 @@ export default function SideBar() {
     }));
   };
 
+  const logOut = () => {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "/login";
+  }
   const linkClass = (path) =>
     `flex items-center gap-4 py-8 px-5 xl:px-10 h-12  ${
       pathname === path
@@ -110,8 +114,8 @@ export default function SideBar() {
           {sidebarRoutes
             .filter((route) => route.isLogout)
             .map((logoutRoute, idx) => (
-              <Link
-                href={logoutRoute.path}
+              <button
+                onClick={() => logOut()}
                 key={idx}
                 className={`${linkClass(
                   logoutRoute.path,
@@ -120,7 +124,7 @@ export default function SideBar() {
               >
                 {logoutRoute.icon}
                 <p className="text-[16px]">{logoutRoute.title}</p>
-              </Link>
+              </button>
             ))}
         </div>
       </div>
