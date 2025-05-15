@@ -31,7 +31,7 @@ export const sidebarRoutes = [
       },
       {
         title: "Directory",
-        path: "/company",
+        path: "/directory",
         icon: <TbBriefcase className="w-6 h-6 object-cover" />,
       },
       {

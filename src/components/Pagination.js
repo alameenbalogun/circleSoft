@@ -1,3 +1,5 @@
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+
 export default function Pagination() {
   return (
     <div className="bg-white p-4 flex flex-col md:flex-row md:justify-between md:items-center shadow rounded-md w-full">
@@ -30,7 +32,8 @@ export default function Pagination() {
 
         <span className="text-black cursor-pointer ml-2 flex items-center border px-3 py-2 border-gray-200 rounded-lg gap-2">
           Show 8
-          <img src="" className="w-4 h-4" />
+          {/* <img src="" className="w-4 h-4" /> */}
+          <MdOutlineKeyboardArrowUp className="w-4 h-4" />
         </span>
       </div>
     </div>

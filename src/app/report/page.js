@@ -1,5 +1,5 @@
-import PageLayout from "@/src/components/PageLayout";
-import ReportCard from "@/src/components/ReportCard";
+import PageLayout from "@/components/PageLayout";
+import ReportCard from "@/components/ReportCard";
 import Link from "next/link";
 import {
   FaBriefcase,

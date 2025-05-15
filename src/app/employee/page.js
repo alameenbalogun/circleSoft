@@ -1,5 +1,4 @@
-import PageLayout from "@/src/components/PageLayout";
-
+import PageLayout from "@/components/PageLayout";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import { HiMiniPlus } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";

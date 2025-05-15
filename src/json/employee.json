@@ -10,7 +10,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "activated"
+    "account": "activated",
+    "email": "justin@email.com",
+    "id": "LN001",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-06-01",
+    "to": "2023-06-10",
+    "type": "Annual",
+    "phone": "+1-555-1001"
   },
   {
     "name": "Sophia Turner",
@@ -23,7 +33,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onleave",
-    "account": "activated"
+    "account": "activated",
+    "email": "sophia@email.com",
+    "id": "LN002",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-07-15",
+    "to": "2023-07-20",
+    "type": "Unpaid Time Off",
+    "phone": "+1-555-1002"
   },
   {
     "name": "Ethan Chen",
@@ -36,7 +56,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onboarding",
-    "account": "activated"
+    "account": "activated",
+    "email": "ethan@email.com",
+    "id": "LN003",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-05-01",
+    "to": "2023-05-05",
+    "type": "Sick Leave (Unpaid)",
+    "phone": "+1-555-1003"
   },
   {
     "name": "Maya Patel",
@@ -49,7 +79,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onboarding",
-    "account": "activated"
+    "account": "activated",
+    "email": "maya@email.com",
+    "id": "LN004",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-04-10",
+    "to": "2023-04-12",
+    "type": "Engagement",
+    "phone": "+1-555-1004"
   },
   {
     "name": "Liam Johnson",
@@ -62,7 +102,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onboarding",
-    "account": "activated"
+    "account": "activated",
+    "email": "liam@email.com",
+    "id": "LN005",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-03-20",
+    "to": "2023-03-25",
+    "type": "Annual",
+    "phone": "+1-555-1005"
   },
   {
     "name": "Ava Kim",
@@ -75,7 +125,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "probation",
-    "account": "activated"
+    "account": "activated",
+    "email": "ava@email.com",
+    "id": "LN006",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-08-01",
+    "to": "2023-08-05",
+    "type": "Sick Leave (Unpaid)",
+    "phone": "+1-555-1006"
   },
   {
     "name": "Noah Brown",
@@ -88,7 +148,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "probation",
-    "account": "activated"
+    "account": "activated",
+    "email": "noah@email.com",
+    "id": "LN007",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-02-01",
+    "to": "2023-02-04",
+    "type": "Unpaid Time Off",
+    "phone": "+1-555-1007"
   },
   {
     "name": "Olivia Davis",
@@ -101,7 +171,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "activated"
+    "account": "activated",
+    "email": "olivia@email.com",
+    "id": "LN008",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-09-01",
+    "to": "2023-09-05",
+    "type": "Annual",
+    "phone": "+1-555-1008"
   },
   {
     "name": "William Garcia",
@@ -114,7 +194,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "activated"
+    "account": "activated",
+    "email": "william@email.com",
+    "id": "LN009",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-06-15",
+    "to": "2023-06-18",
+    "type": "Relative Funeral",
+    "phone": "+1-555-1009"
   },
   {
     "name": "Emma Wilson",
@@ -127,7 +217,40 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "activated"
+    "account": "activated",
+    "email": "emma@email.com",
+    "id": "LN010",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-01-15",
+    "to": "2023-01-20",
+    "type": "Engagement",
+    "phone": "+1-555-1010"
+  },
+  {
+    "name": "Emma Wilson",
+    "department": "Engineering",
+    "age": 23,
+    "growth": "+75%",
+    "employmentType": "Permanent",
+    "avatar": "emma.svg",
+    "jobTitle": "UI/UX Designer",
+    "lineManager": "@Pristucandro",
+    "office": "Tech",
+    "employeeStatus": "active",
+    "account": "activated",
+    "email": "emma@email.com",
+    "phone": "+1-202-555-0183",
+    "id": "LN010",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-01-15",
+    "to": "2023-01-20",
+    "type": "Engagement"
   },
   {
     "name": "James Lee",
@@ -140,7 +263,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onboarding",
-    "account": "activated"
+    "account": "activated",
+    "email": "james@email.com",
+    "phone": "+1-202-555-0119",
+    "id": "LN011",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-10-01",
+    "to": "2023-10-03",
+    "type": "Sick Leave (Unpaid)"
   },
   {
     "name": "Charlotte Hall",
@@ -153,7 +286,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onboarding",
-    "account": "activated"
+    "account": "activated",
+    "email": "charlotte@email.com",
+    "phone": "+1-202-555-0158",
+    "id": "LN012",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-03-10",
+    "to": "2023-03-13",
+    "type": "Annual"
   },
   {
     "name": "Benjamin Wright",
@@ -166,7 +309,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onboarding",
-    "account": "activated"
+    "account": "activated",
+    "email": "benjamin@email.com",
+    "phone": "+1-202-555-0175",
+    "id": "LN013",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-07-01",
+    "to": "2023-07-04",
+    "type": "Unpaid Time Off"
   },
   {
     "name": "Amelia Lopez",
@@ -179,7 +332,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "onboarding",
-    "account": "activated"
+    "account": "activated",
+    "email": "amelia@email.com",
+    "phone": "+1-202-555-0184",
+    "id": "LN014",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-11-11",
+    "to": "2023-11-13",
+    "type": "Sick Leave (Unpaid)"
   },
   {
     "name": "Lucas Scott",
@@ -192,7 +355,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "activated"
+    "account": "activated",
+    "email": "lucas@email.com",
+    "phone": "+1-202-555-0122",
+    "id": "LN015",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-05-20",
+    "to": "2023-05-23",
+    "type": "Annual"
   },
   {
     "name": "Mila Young",
@@ -205,7 +378,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "need invitation"
+    "account": "need invitation",
+    "email": "mila@email.com",
+    "phone": "+1-202-555-0170",
+    "id": "LN016",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-06-10",
+    "to": "2023-06-14",
+    "type": "Relative Funeral"
   },
   {
     "name": "Henry Allen",
@@ -218,7 +401,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "need invitation"
+    "account": "need invitation",
+    "email": "henry@email.com",
+    "phone": "+1-202-555-0137",
+    "id": "LN017",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-09-25",
+    "to": "2023-09-29",
+    "type": "Annual"
   },
   {
     "name": "Ella Martinez",
@@ -231,7 +424,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "need invitation"
+    "account": "need invitation",
+    "email": "ella@email.com",
+    "phone": "+1-202-555-0109",
+    "id": "LN018",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-12-01",
+    "to": "2023-12-05",
+    "type": "Engagement"
   },
   {
     "name": "Jack Walker",
@@ -244,7 +447,17 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "activated"
+    "account": "activated",
+    "email": "jack@email.com",
+    "phone": "+1-202-555-0161",
+    "id": "LN019",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-08-10",
+    "to": "2023-08-14",
+    "type": "Unpaid Time Off"
   },
   {
     "name": "Grace Rivera",
@@ -257,6 +470,19 @@
     "lineManager": "@Pristucandro",
     "office": "Tech",
     "employeeStatus": "active",
-    "account": "activated"
+    "account": "activated",
+    "email": "grace@email.com",
+    "phone": "+1-202-555-0144",
+    "id": "LN020",
+    "entitlement": 20,
+    "carryOver": 0,
+    "request": 0,
+    "image": "/marcus.svg",
+    "from": "2023-10-05",
+    "to": "2023-10-08",
+    "type": "Annual"
   }
 ]
+
+
+
