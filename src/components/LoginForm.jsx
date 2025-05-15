@@ -12,6 +12,10 @@ import { FcGoogle } from "react-icons/fc";
 export function LoginForm({ className, ...props }) {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
+const [errors, setErrors] = useState({
+  email: "",
+  password: "",
+});
 
   const handleShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -21,14 +25,43 @@ export function LoginForm({ className, ...props }) {
     password: "123456",
   });
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+
+  };
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = formData.email;
-    const password = formData.password;
+    const { email, password } = formData;
+      const newErrors = { email: "", password: "" };
 
-    console.log("Email:", email);
-    console.log("Password:", password);
 
+     if (!validateEmail(email)) {
+    newErrors.email = "Invalid email format.";
+  } else if (email !== "aet@gmail.com") {
+    newErrors.email = "Email not recognized.";
+  }
+
+
+    if (!validatePassword(password)) {
+     newErrors.password = "Password must be at least 6 characters long.";
+      
+    }else if (password !== "123456") {
+      newErrors.password = "Incorrect password.";}
+    // Simulate a login request
+    //  send the email and password to the server for authentication
+ // If errors exist, update state and stop submit
+  if (newErrors.email || newErrors.password) {
+    setErrors(newErrors);
+    return;
+  }
+
+
+  setErrors({ email: "", password: "" });
     localStorage.setItem("loggedIn", true);
     router.push("/dashboard");
   };
@@ -54,13 +87,18 @@ export function LoginForm({ className, ...props }) {
             id="email"
             type="email"
             value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+                 if (errors.email) setErrors({ ...errors, email: "" });
+
+            }}
             placeholder="input your registered email"
             required
             className="placeholder:text-gray-500 placeholder:text-sm h-12 text-black outline-none focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-none"
           />
+          {errors.email && (
+            <p className="text-sm text-red-500">{errors.email}</p>
+          )}
         </div>
         <div className="grid gap-2">
           <Label htmlFor="password">
@@ -71,15 +109,22 @@ export function LoginForm({ className, ...props }) {
               id="password"
               type={showPassword ? "text" : "password"}
               value={formData.password}
-              onChange={(e) =>
-                setFormData({ ...formData, password: e.target.value })
-              }
+              onChange={(e) => {
+                setFormData({ ...formData, password: e.target.value });
+    if (errors.password) setErrors({ ...errors, password: "" });
+              }}
               placeholder="input your registered password"
               required
               className="placeholder:text-gray-500 placeholder:text-sm h-12 text-black outline-none focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-none"
             />
+            {errors.password && (
+              <p className="text-sm text-red-500">{errors.password}</p>
+            )}
+
             <button
               onClick={handleShowPassword}
+              type="button"
+              aria-label="Toggle password visibility"
               className="absolute right-2 top-1/2 -translate-y-1/2  rounded-md p-1 text-gray-500 hover:text-gray-700 cursor-pointer"
             >
               {showPassword ? (

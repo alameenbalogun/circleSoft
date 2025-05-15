@@ -1,10 +1,10 @@
 "use client";
 import PageLayout from "@/src/components/PageLayout";
-import jobs from "../../json/jobs.json";
+import jobs from "../../../json/jobs.json";
 import { useState } from "react";
 import Image from "next/image";
 import { GraduationCap, MapPin } from "lucide-react";
-import employees from "../../json/employee.json";
+import employees from "../../../json/employee.json";
 
 export default function Page() {
   const [sortOpen, setSortOpen] = useState(false);
