@@ -116,7 +116,7 @@ export default function Page() {
                   >
                     <CheckBox />
                     <Image
-                      src="./leo.svg"
+                      src="leo.svg"
                       width={30}
                       height={30}
                       alt={employee.name}
