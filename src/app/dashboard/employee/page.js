@@ -107,7 +107,7 @@ export default function Page() {
               {employee.map((employee, idx) => (
                 <tr
                   key={idx}
-                  onClick={() => router.push(`/employee/${idx}`)}
+                  onClick={() => router.push(`/dashboard/employee/${idx}`)}
                   className="odd:bg-white even:bg-gray-50 border-gray-200 cursor-pointer hover:bg-gray-100"
                 >
                   <td
@@ -116,7 +116,7 @@ export default function Page() {
                   >
                     <CheckBox />
                     <Image
-                      src="leo.svg"
+                      src="./leo.svg"
                       width={30}
                       height={30}
                       alt={employee.name}

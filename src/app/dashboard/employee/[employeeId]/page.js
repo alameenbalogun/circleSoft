@@ -4,25 +4,16 @@ import { IoIosArrowBack } from "react-icons/io";
 import { MdOutlineLocalPhone, MdOutlineMailOutline } from "react-icons/md";
 import { TfiWorld } from "react-icons/tfi";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/src/components/ui/tabs";
 import { GoPencil, GoPlus } from "react-icons/go";
 import { MdDelete, MdOutlineSimCardDownload } from "react-icons/md";
 import Link from "next/link";
 import employee from "@/src/json/employee.json";
-
-// const employeeDetail = {
-//   name: "Justin Lipshutz",
-//   department: "Marketing",
-//   age: 22,
-//   growth: "+100%",
-//   employmentType: "Permanent",
-//   avatar: "justin.svg",
-//   jobTitle: "UI/UX Designer",
-//   lineManager: "@Pristucandro",
-//   office: "Tech",
-//   employeeStatus: "active",
-//   account: "activated",
-// };
 
 export default function Page({ params }) {
   console.log(params);
@@ -32,7 +23,7 @@ export default function Page({ params }) {
   return (
     <PageLayout>
       <div className="flex items-center gap-2">
-        <Link href="/employee">
+        <Link href="/dashboard/employee">
           {" "}
           <IoIosArrowBack className="w-6 h-6" />
         </Link>
@@ -92,65 +83,7 @@ export default function Page({ params }) {
               type="button"
             >
               Action
-              {/* <svg
-                className="w-2.5 h-2.5 ms-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg> */}
             </button>
-
-            {/* <div
-              id="dropdown"
-              className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
-            >
-              <ul
-                className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownDefaultButton"
-              >
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Dashboard
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Earnings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
 

@@ -215,7 +215,8 @@ export default function Page() {
                           src={employee?.image}
                           width={30}
                           height={30}
-                          alt={employee.name}
+                          // alt={employee.name}
+                          alt={"employee.name"}
                         />
                         {employee.firstName + " " + employee.lastName}
                       </th>
