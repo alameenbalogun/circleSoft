@@ -24,21 +24,22 @@ import { useQuery } from "@tanstack/react-query";
 import Spinner from "@/src/components/Spinner";
 import { useState } from "react";
 import { PaginationControls } from "@/src/resuable/Paginations";
+import { fetchAllEmployees, fetchEmployees } from "@/src/lib/employees";
 
-const fetchEmployees = async ({ queryKey }) => {
-  const [_key, page] = queryKey;
-  const USERS_PER_PAGE = 10;
-  const skip = (page - 1) * USERS_PER_PAGE;
-  const res = await axios.get(
-    `https://dummyjson.com/users?limit=${USERS_PER_PAGE}&skip=${skip}`
-  );
-  return res.data;
-};
+// const fetchEmployees = async ({ queryKey }) => {
+//   const [_key, page] = queryKey;
+//   const USERS_PER_PAGE = 10;
+//   const skip = (page - 1) * USERS_PER_PAGE;
+//   const res = await axios.get(
+//     `https://dummyjson.com/users?limit=${USERS_PER_PAGE}&skip=${skip}`
+//   );
+//   return res.data;
+// };
 
-const fetchAllEmployees = async () => {
-  const res = await axios.get("https://dummyjson.com/users?limit=208");
-  return res.data;
-};
+// const fetchAllEmployees = async () => {
+//   const res = await axios.get("https://dummyjson.com/users?limit=208");
+//   return res.data;
+// };
 
 export default function Page() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -57,8 +58,6 @@ export default function Page() {
     queryFn: fetchAllEmployees,
   });
 
-  console.log("all", allData);
-
   const genderCounts = allData?.users?.reduce(
     (acc, employee) => {
       if (employee.gender === "female") {
@@ -74,8 +73,6 @@ export default function Page() {
   const total = genderCounts?.female + genderCounts?.male;
   const femalePercentage = ((genderCounts?.female / total) * 100).toFixed(1);
   const malePercentage = ((genderCounts?.male / total) * 100).toFixed(1);
-
-  console.log({ femalePercentage, malePercentage, total, genderCounts });
 
   const data1 = [
     { month: "Jan", view: 45, applied: 15 },
