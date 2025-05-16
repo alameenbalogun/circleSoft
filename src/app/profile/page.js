@@ -1,4 +1,4 @@
-import PageLayout from "@/src/components/PageLayout";
+import PageLayout from "@/components/PageLayout";
 import {
   Card,
   CardContent,
@@ -6,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/src/components/ui/card";
+} from "@/components/ui/card";
 
 export default function Page() {
   return (
