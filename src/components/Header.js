@@ -3,8 +3,8 @@ export default function Header() {
     <div className="grid grid-cols-[auto_1fr_auto] items-center gap-28 p-3 pl-5 !pr-10 bg-white shadow-sm z-50 fixed w-full">
       <div className="flex gap-1 items-center">
         <div className="flex justify-center items-center">
-          <img src="./logo-1.svg" alt="Side Logo" className="" />
-          <img src="./logo.svg" alt="Center Logo" className="-ml-[18px]" />
+          <img src="/logo-1.svg" alt="Side Logo" className="" />
+          <img src="/logo.svg" alt="Center Logo" className="-ml-[18px]" />
         </div>
 
         <h3 className="text-xl font-sans">

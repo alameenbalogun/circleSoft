@@ -8,6 +8,7 @@ import Image from "next/image";
 import employee from "@/src/json/employee.json";
 import CheckBox from "@/src/components/button/Checkbox";
 import { HiArrowsUpDown } from "react-icons/hi2";
+import { Button } from "@/src/components/ui/button";
 
 export default function Page() {
   return (
@@ -23,14 +24,16 @@ export default function Page() {
           </div>
 
           <div className="flex justify-start items-center gap-3">
-            <button className="text-black cursor-pointer hover:bg-gray-700 hover:text-white border-gray-700 border-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-100 dark:hover:bg-gray-300 dark:focus:ring-gray-100 gap-1 ">
+            {/* <button className="text-black cursor-pointer hover:bg-gray-700 hover:text-white border-gray-700 border-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-100 dark:hover:bg-gray-300 dark:focus:ring-gray-100 gap-1 "></button> */}
+            {/* <button className="text-white cursor-pointer fo border border-transparent bg-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 hover:border-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-1"></button> */}
+            <Button variant="outline" size="lg">
               <LiaFileDownloadSolid className="w-5 h-5 object-cover" />
               Download
-            </button>
-            <button className="text-white cursor-pointer fo border border-transparent bg-gray-700 hover:text-gray-700 hover:bg-white hover:border-2 hover:border-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-1">
+            </Button>
+            <Button className="bg-[#020752] text-white" size="lg">
               <HiMiniPlus className="w-5 h-5 object-cover" />
               Add New
-            </button>
+            </Button>
           </div>
         </div>
 
